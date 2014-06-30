@@ -1,17 +1,17 @@
-Package: sluthware.SWISeeStars
-Name: SWISeeStars
-Version: 1.0-1
-Description: 
-Section: System
-Depends: firmware (>= 5.0), mobilesubstrate
+Package: com.patsluth.swgesturemusiccontrols
+Name: I See Stars
+Version: 1.0
+Description: View music ratings in the playlist tables
+Section: Tweaks
+Depends: firmware (>= 7.1), mobilesubstrate
 Conflicts: 
 Replaces: 
 Priority: optional
 Architecture: iphoneos-arm
 Author: Pat Sluth
-dev: 
+dev: Pat Sluth
 Homepage: 
 Depiction: 
-Maintainer: 
-Icon: 
+Maintainer: pat.sluth@gmail.com
+Icon:
 

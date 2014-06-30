@@ -1,12 +1,12 @@
 //
-//  SWBundle.h
-//  SWGestureMusicControls
+//  SWISSBundle.h
+//  SWISeeStars
 //
 //  Created by Pat Sluth on 2014-02-25.
 //
 //
 
-@interface SWBundle : NSObject
+@interface SWISSBundle : NSObject
 
 + (NSBundle *)bundleAtPath:(NSString *)path andLoad:(BOOL)load;
 + (NSBundle *)mainBundleAndLoad:(BOOL)load;

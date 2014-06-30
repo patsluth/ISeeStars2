@@ -1,11 +1,15 @@
-//
-// Prefix header for all source files of the 'SWISeeStars' target in the 'SWISeeStars' project
-//
+
+
+
+
 
 #ifdef __OBJC__
 
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
+    #import <objc/runtime.h>
+
+    #define ISIPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 #endif
 

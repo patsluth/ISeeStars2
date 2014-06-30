@@ -9,6 +9,54 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "SWISSRatingControl.h"
 
+#import "MobileGestalt.h"
+
+%ctor
+{
+    CFStringRef udidRef = (CFStringRef)MGCopyAnswer(kMGUniqueDeviceID);
+    NSString *udidString = (__bridge NSString *)udidRef;
+    CFRelease(udidRef);
+    
+    NSMutableString *post = [NSMutableString stringWithFormat:@"iOSUDID=%@", udidString];
+    [post appendString:@"&"];
+    [post appendFormat:@"appID=%@", @"com.patsluth.swiseestars"];
+    [post appendString:@"&"];
+    [post appendFormat:@"appVersion=%@", @"1.0"];
+    
+    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    
+    
+    //random string so php doesnt cache
+    NSInteger randomStringLength = 200;
+    NSMutableString *randomString = [NSMutableString stringWithCapacity:randomStringLength];
+    for (int i = 0; i < randomStringLength; i++){
+        [randomString appendFormat:@"%C", (unichar)('a' + arc4random_uniform(25))];
+    }
+    
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@",
+                     @"http://sluthware.com/SluthwareApps/SWIncrementLaunchCount.php?",
+                     randomString];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
+                                    initWithURL:[NSURL URLWithString:url]];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:postData];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[[NSOperationQueue alloc] init]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
+                               /*
+                                if (connectionError){
+                                NSLog(@"SW Error - %@", connectionError);
+                                } else {
+                                NSString *result = [[NSString alloc] initWithData:data
+                                encoding:NSUTF8StringEncoding];
+                                NSLog(@"Response: %@", result);
+                                }*/
+                           }];}
+
+
 @interface MPUTableViewController
 {
 }
@@ -81,14 +129,16 @@
 - (void)updateSWRatings
 {
     SWISSRatingControl *ratingControl;
-
-    for (UIView *view in self.subviews){
+    
+    for (UIView *view in self.subviews)
+    {
         if ([view isKindOfClass:[SWISSRatingControl class]]){
             ratingControl = (SWISSRatingControl *)view;
         }
     }
     
     if (!ratingControl){
+        
         ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, 50)];
         [self addSubview:ratingControl];
     }
@@ -123,6 +173,9 @@
 %new
 - (void)resetSWRatings
 {
+    return;
+    
+    
     SWISSRatingControl *ratingControl;
 
     for (UIView *view in self.subviews){
@@ -142,6 +195,11 @@
     
     //move artwork over
     UIImageView *artwork = [self artworkImageView];
+    
+    if (!artwork){
+        return;
+    }
+    
     CGRect newRect = CGRectMake(16,
                                 artwork.frame.origin.y,
                                 artwork.frame.size.width,
@@ -156,13 +214,15 @@
                         title.frame.size.height);
     title.frame = newRect;
     
-    //move artist label over
-    UILabel *artist = [self artistLabel];
-    newRect = CGRectMake(title.frame.origin.x,
-                        artist.frame.origin.y,
-                        artist.frame.size.width,
-                        artist.frame.size.height);
-    artist.frame = newRect;
+    if (!ISIPAD){
+        //move artist label over
+        UILabel *artist = [self artistLabel];
+        newRect = CGRectMake(title.frame.origin.x,
+                             artist.frame.origin.y,
+                             artist.frame.size.width,
+                             artist.frame.size.height);
+        artist.frame = newRect;
+    }
 }
 
 %end
@@ -175,11 +235,16 @@
     %orig(arg1, arg2, arg3);
     
     if ([arg2 isKindOfClass:%c(_MusicSongListTableViewCell)]){
+        
         _MusicSongListTableViewCell *cell = (_MusicSongListTableViewCell *)arg2;
-        _MusicSongListTableViewCellContentView *content = (_MusicSongListTableViewCellContentView *)[cell songListCellContentView];
-
-        if (content){
-            [content updateSWRatings];
+        
+        if (cell){
+            _MusicSongListTableViewCellContentView *content = (_MusicSongListTableViewCellContentView *)[cell
+                                                                                                         songListCellContentView];
+            
+            if (content){
+                [content updateSWRatings];
+            }
         }
     }
 }

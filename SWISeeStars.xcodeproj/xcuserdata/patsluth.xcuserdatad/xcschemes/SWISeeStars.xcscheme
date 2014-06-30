@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E8CEEB4196081DE00F2D0C9"
+               BlueprintIdentifier = "2EA1D43518BBFC9A007C9FAF"
                BuildableName = "SWISeeStars.dylib"
                BlueprintName = "SWISeeStars"
                ReferencedContainer = "container:SWISeeStars.xcodeproj">

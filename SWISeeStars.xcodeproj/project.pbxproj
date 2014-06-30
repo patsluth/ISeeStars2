@@ -7,175 +7,191 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E8CEEB9196081DE00F2D0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8CEEB8196081DE00F2D0C9 /* Foundation.framework */; };
-		2E8CEEC4196081DE00F2D0C9 /* SWISeeStars.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CEEC3196081DE00F2D0C9 /* SWISeeStars.mm */; };
-		2E8CEECF1960825200F2D0C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8CEECE1960825200F2D0C9 /* UIKit.framework */; };
-		2E8CEED1196082A200F2D0C9 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8CEED0196082A200F2D0C9 /* libsubstrate.dylib */; };
-		2E8CEED319608DF600F2D0C9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8CEED219608DF600F2D0C9 /* MediaPlayer.framework */; };
-		2E8CEED71960A7AC00F2D0C9 /* SWISSRatingControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E8CEED51960A7AC00F2D0C9 /* SWISSRatingControl.h */; };
-		2E8CEED81960A7AC00F2D0C9 /* SWISSRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CEED61960A7AC00F2D0C9 /* SWISSRatingControl.m */; };
-		2E8CEEDB1960A9D300F2D0C9 /* SWBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E8CEED91960A9D300F2D0C9 /* SWBundle.h */; };
-		2E8CEEDC1960A9D300F2D0C9 /* SWBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CEEDA1960A9D300F2D0C9 /* SWBundle.m */; };
+		2E0E8FEF18C1908C00F73822 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0E8FEC18C1905C00F73822 /* libsubstrate.dylib */; };
+		2E1F14D518CBCE94008E5F72 /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0E8FEA18C1904500F73822 /* Preferences.framework */; };
+		2E7C6A3D18BC2CAE00F12015 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C6A3C18BC2CAE00F12015 /* MediaPlayer.framework */; };
+		2EA1D43A18BBFC9A007C9FAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA1D43918BBFC9A007C9FAF /* Foundation.framework */; };
+		2EA1D45218BBFCE6007C9FAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA1D45118BBFCE6007C9FAF /* UIKit.framework */; };
+		2EC7263719610C11001DE8A3 /* MobileGestalt.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC7263619610C11001DE8A3 /* MobileGestalt.h */; };
+		2EC7263B19610D53001DE8A3 /* SWISeeStars-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 2EC7263A19610D53001DE8A3 /* SWISeeStars-Prefix.pch */; };
+		2EC7263E19610D68001DE8A3 /* SWISeeStars.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7263D19610D68001DE8A3 /* SWISeeStars.mm */; };
+		2EC726771961102E001DE8A3 /* SWISSRatingControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC726751961102E001DE8A3 /* SWISSRatingControl.h */; };
+		2EC726781961102E001DE8A3 /* SWISSRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC726761961102E001DE8A3 /* SWISSRatingControl.m */; };
+		2EC7267B19611043001DE8A3 /* SWISSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC7267919611043001DE8A3 /* SWISSBundle.h */; };
+		2EC7267C19611043001DE8A3 /* SWISSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7267A19611043001DE8A3 /* SWISSBundle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E8CEEB5196081DE00F2D0C9 /* SWISeeStars.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SWISeeStars.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E8CEEB8196081DE00F2D0C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2E8CEEC0196081DE00F2D0C9 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
-		2E8CEEC1196081DE00F2D0C9 /* SWISeeStars-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SWISeeStars-Prefix.pch"; sourceTree = "<group>"; };
-		2E8CEEC2196081DE00F2D0C9 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SWISeeStars.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		2E8CEEC3196081DE00F2D0C9 /* SWISeeStars.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SWISeeStars.mm; sourceTree = "<group>"; };
-		2E8CEECE1960825200F2D0C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2E8CEED0196082A200F2D0C9 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
-		2E8CEED219608DF600F2D0C9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		2E8CEED41960A73000F2D0C9 /* Package */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Package; sourceTree = "<group>"; };
-		2E8CEED51960A7AC00F2D0C9 /* SWISSRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWISSRatingControl.h; sourceTree = "<group>"; };
-		2E8CEED61960A7AC00F2D0C9 /* SWISSRatingControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWISSRatingControl.m; sourceTree = "<group>"; };
-		2E8CEED91960A9D300F2D0C9 /* SWBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBundle.h; sourceTree = "<group>"; };
-		2E8CEEDA1960A9D300F2D0C9 /* SWBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBundle.m; sourceTree = "<group>"; };
+		2E0E8FEA18C1904500F73822 /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = ../../../../../../opt/iOSOpenDev/frameworks/Preferences.framework; sourceTree = "<group>"; };
+		2E0E8FEC18C1905C00F73822 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
+		2E7C6A3C18BC2CAE00F12015 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2E7C6AB018BC605F00F12015 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2EA1D43618BBFC9A007C9FAF /* SWISeeStars.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SWISeeStars.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA1D43918BBFC9A007C9FAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2EA1D45118BBFCE6007C9FAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2EA1D50B18BC139B007C9FAF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		2EC7263619610C11001DE8A3 /* MobileGestalt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MobileGestalt.h; path = "../ios-reversed-headers/MobileGestalt/MobileGestalt.h"; sourceTree = "<group>"; };
+		2EC7263919610D53001DE8A3 /* PackageVersion.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PackageVersion.plist; path = SWISeeStars/PackageVersion.plist; sourceTree = SOURCE_ROOT; };
+		2EC7263A19610D53001DE8A3 /* SWISeeStars-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SWISeeStars-Prefix.pch"; path = "SWISeeStars/SWISeeStars-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		2EC7263C19610D60001DE8A3 /* SWISeeStars.xm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SWISeeStars.xm; path = SWISeeStars/SWISeeStars.xm; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2EC7263D19610D68001DE8A3 /* SWISeeStars.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SWISeeStars.mm; path = SWISeeStars/SWISeeStars.mm; sourceTree = SOURCE_ROOT; };
+		2EC7264B19610D94001DE8A3 /* Package */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Package; path = SWISeeStars/Package; sourceTree = SOURCE_ROOT; };
+		2EC726751961102E001DE8A3 /* SWISSRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWISSRatingControl.h; sourceTree = "<group>"; };
+		2EC726761961102E001DE8A3 /* SWISSRatingControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWISSRatingControl.m; sourceTree = "<group>"; };
+		2EC7267919611043001DE8A3 /* SWISSBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWISSBundle.h; sourceTree = "<group>"; };
+		2EC7267A19611043001DE8A3 /* SWISSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWISSBundle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E8CEEB1196081DE00F2D0C9 /* Frameworks */ = {
+		2EA1D43218BBFC9A007C9FAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8CEED319608DF600F2D0C9 /* MediaPlayer.framework in Frameworks */,
-				2E8CEED1196082A200F2D0C9 /* libsubstrate.dylib in Frameworks */,
-				2E8CEECF1960825200F2D0C9 /* UIKit.framework in Frameworks */,
-				2E8CEEB9196081DE00F2D0C9 /* Foundation.framework in Frameworks */,
+				2E1F14D518CBCE94008E5F72 /* Preferences.framework in Frameworks */,
+				2E0E8FEF18C1908C00F73822 /* libsubstrate.dylib in Frameworks */,
+				2E7C6A3D18BC2CAE00F12015 /* MediaPlayer.framework in Frameworks */,
+				2EA1D45218BBFCE6007C9FAF /* UIKit.framework in Frameworks */,
+				2EA1D43A18BBFC9A007C9FAF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E8CEEAA196081DE00F2D0C9 = {
+		2EA1D42B18BBFC9A007C9FAF = {
 			isa = PBXGroup;
 			children = (
-				2E8CEEBA196081DE00F2D0C9 /* SWISeeStars */,
-				2E8CEEB7196081DE00F2D0C9 /* Frameworks */,
-				2E8CEEB6196081DE00F2D0C9 /* Products */,
+				2EC7265C19610F6E001DE8A3 /* SWISeeStars */,
+				2EA1D43818BBFC9A007C9FAF /* Frameworks */,
+				2EA1D43718BBFC9A007C9FAF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2E8CEEB6196081DE00F2D0C9 /* Products */ = {
+		2EA1D43718BBFC9A007C9FAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E8CEEB5196081DE00F2D0C9 /* SWISeeStars.dylib */,
+				2EA1D43618BBFC9A007C9FAF /* SWISeeStars.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2E8CEEB7196081DE00F2D0C9 /* Frameworks */ = {
+		2EA1D43818BBFC9A007C9FAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E8CEED219608DF600F2D0C9 /* MediaPlayer.framework */,
-				2E8CEED0196082A200F2D0C9 /* libsubstrate.dylib */,
-				2E8CEECE1960825200F2D0C9 /* UIKit.framework */,
-				2E8CEEB8196081DE00F2D0C9 /* Foundation.framework */,
+				2EC7263619610C11001DE8A3 /* MobileGestalt.h */,
+				2E0E8FEC18C1905C00F73822 /* libsubstrate.dylib */,
+				2E0E8FEA18C1904500F73822 /* Preferences.framework */,
+				2E7C6AB018BC605F00F12015 /* MessageUI.framework */,
+				2E7C6A3C18BC2CAE00F12015 /* MediaPlayer.framework */,
+				2EA1D45118BBFCE6007C9FAF /* UIKit.framework */,
+				2EA1D43918BBFC9A007C9FAF /* Foundation.framework */,
+				2EA1D50B18BC139B007C9FAF /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2E8CEEBA196081DE00F2D0C9 /* SWISeeStars */ = {
+		2EA1D44018BBFC9A007C9FAF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2E8CEED91960A9D300F2D0C9 /* SWBundle.h */,
-				2E8CEEDA1960A9D300F2D0C9 /* SWBundle.m */,
-				2E8CEEC2196081DE00F2D0C9 /* SWISeeStars.xm */,
-				2E8CEEC3196081DE00F2D0C9 /* SWISeeStars.mm */,
-				2E8CEED51960A7AC00F2D0C9 /* SWISSRatingControl.h */,
-				2E8CEED61960A7AC00F2D0C9 /* SWISSRatingControl.m */,
-				2E8CEED41960A73000F2D0C9 /* Package */,
-				2E8CEEBF196081DE00F2D0C9 /* Supporting Files */,
-			);
-			path = SWISeeStars;
-			sourceTree = "<group>";
-		};
-		2E8CEEBF196081DE00F2D0C9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2E8CEEC0196081DE00F2D0C9 /* PackageVersion.plist */,
-				2E8CEEC1196081DE00F2D0C9 /* SWISeeStars-Prefix.pch */,
+				2EC7263919610D53001DE8A3 /* PackageVersion.plist */,
+				2EC7263A19610D53001DE8A3 /* SWISeeStars-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = ../SWGestureMusicControls;
+			sourceTree = "<group>";
+		};
+		2EC7265C19610F6E001DE8A3 /* SWISeeStars */ = {
+			isa = PBXGroup;
+			children = (
+				2EC7267919611043001DE8A3 /* SWISSBundle.h */,
+				2EC7267A19611043001DE8A3 /* SWISSBundle.m */,
+				2EC7263C19610D60001DE8A3 /* SWISeeStars.xm */,
+				2EC7263D19610D68001DE8A3 /* SWISeeStars.mm */,
+				2EC726751961102E001DE8A3 /* SWISSRatingControl.h */,
+				2EC726761961102E001DE8A3 /* SWISSRatingControl.m */,
+				2EC7264B19610D94001DE8A3 /* Package */,
+				2EA1D44018BBFC9A007C9FAF /* Supporting Files */,
+			);
+			path = SWISeeStars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2E8CEEB2196081DE00F2D0C9 /* Headers */ = {
+		2EA1D43318BBFC9A007C9FAF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8CEEDB1960A9D300F2D0C9 /* SWBundle.h in Headers */,
-				2E8CEED71960A7AC00F2D0C9 /* SWISSRatingControl.h in Headers */,
+				2EC7263719610C11001DE8A3 /* MobileGestalt.h in Headers */,
+				2EC7263B19610D53001DE8A3 /* SWISeeStars-Prefix.pch in Headers */,
+				2EC7267B19611043001DE8A3 /* SWISSBundle.h in Headers */,
+				2EC726771961102E001DE8A3 /* SWISSRatingControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2E8CEEB4196081DE00F2D0C9 /* SWISeeStars */ = {
+		2EA1D43518BBFC9A007C9FAF /* SWISeeStars */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E8CEECB196081DE00F2D0C9 /* Build configuration list for PBXNativeTarget "SWISeeStars" */;
+			buildConfigurationList = 2EA1D44C18BBFC9A007C9FAF /* Build configuration list for PBXNativeTarget "SWISeeStars" */;
 			buildPhases = (
-				2E8CEEAF196081DE00F2D0C9 /* ShellScript */,
-				2E8CEEB0196081DE00F2D0C9 /* Sources */,
-				2E8CEEB1196081DE00F2D0C9 /* Frameworks */,
-				2E8CEEB2196081DE00F2D0C9 /* Headers */,
-				2E8CEEB3196081DE00F2D0C9 /* ShellScript */,
+				2EA1D43018BBFC9A007C9FAF /* Run Script */,
+				2EA1D43118BBFC9A007C9FAF /* Sources */,
+				2EA1D43218BBFC9A007C9FAF /* Frameworks */,
+				2EA1D43318BBFC9A007C9FAF /* Headers */,
+				2EA1D43418BBFC9A007C9FAF /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SWISeeStars;
-			productName = SWISeeStars;
-			productReference = 2E8CEEB5196081DE00F2D0C9 /* SWISeeStars.dylib */;
+			productName = SWGestureMusicControls;
+			productReference = 2EA1D43618BBFC9A007C9FAF /* SWISeeStars.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2E8CEEAB196081DE00F2D0C9 /* Project object */ = {
+		2EA1D42C18BBFC9A007C9FAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 2E8CEEAE196081DE00F2D0C9 /* Build configuration list for PBXProject "SWISeeStars" */;
+			buildConfigurationList = 2EA1D42F18BBFC9A007C9FAF /* Build configuration list for PBXProject "SWISeeStars" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2E8CEEAA196081DE00F2D0C9;
-			productRefGroup = 2E8CEEB6196081DE00F2D0C9 /* Products */;
+			mainGroup = 2EA1D42B18BBFC9A007C9FAF;
+			productRefGroup = 2EA1D43718BBFC9A007C9FAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E8CEEB4196081DE00F2D0C9 /* SWISeeStars */,
+				2EA1D43518BBFC9A007C9FAF /* SWISeeStars */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E8CEEAF196081DE00F2D0C9 /* ShellScript */ = {
+		2EA1D43018BBFC9A007C9FAF /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos";
 		};
-		2E8CEEB3196081DE00F2D0C9 /* ShellScript */ = {
+		2EA1D43418BBFC9A007C9FAF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -191,23 +207,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2E8CEEB0196081DE00F2D0C9 /* Sources */ = {
+		2EA1D43118BBFC9A007C9FAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8CEED81960A7AC00F2D0C9 /* SWISSRatingControl.m in Sources */,
-				2E8CEEDC1960A9D300F2D0C9 /* SWBundle.m in Sources */,
-				2E8CEEC4196081DE00F2D0C9 /* SWISeeStars.mm in Sources */,
+				2EC7267C19611043001DE8A3 /* SWISSBundle.m in Sources */,
+				2EC726781961102E001DE8A3 /* SWISSRatingControl.m in Sources */,
+				2EC7263E19610D68001DE8A3 /* SWISeeStars.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2E8CEEC9196081DE00F2D0C9 /* Debug */ = {
+		2EA1D44A18BBFC9A007C9FAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -216,12 +233,14 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -229,6 +248,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
@@ -236,10 +256,11 @@
 			};
 			name = Debug;
 		};
-		2E8CEECA196081DE00F2D0C9 /* Release */ = {
+		2EA1D44B18BBFC9A007C9FAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -247,12 +268,15 @@
 					"$(SDKROOT)/System/Library/PrivateFrameworks",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -260,23 +284,30 @@
 			};
 			name = Release;
 		};
-		2E8CEECC196081DE00F2D0C9 /* Debug */ = {
+		2EA1D44D18BBFC9A007C9FAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SWISeeStars/SWISeeStars-Prefix.pch";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/iOSOpenDev/lib,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SluthwareExtensionsiOS-cgzsvjptwjemophaaechayijevdt/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SWiOSLibrary-dpuxymmupozkbbbuxhbyejkidbek/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/SWISeeStars/Package/Library/MobileSubstrate/DynamicLibraries",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SWISeeStars;
 				iOSOpenDevBuildPackageOnAnyBuild = YES;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 10.200.73.120;
+				iOSOpenDevDevice = 10.200.73.149;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -284,23 +315,30 @@
 			};
 			name = Debug;
 		};
-		2E8CEECD196081DE00F2D0C9 /* Release */ = {
+		2EA1D44E18BBFC9A007C9FAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SWISeeStars/SWISeeStars-Prefix.pch";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/iOSOpenDev/lib,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SluthwareExtensionsiOS-cgzsvjptwjemophaaechayijevdt/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SWiOSLibrary-dpuxymmupozkbbbuxhbyejkidbek/Build/Products/Debug-iphoneos",
+					"$(PROJECT_DIR)/SWISeeStars/Package/Library/MobileSubstrate/DynamicLibraries",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SWISeeStars;
 				iOSOpenDevBuildPackageOnAnyBuild = YES;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 10.200.73.120;
+				iOSOpenDevDevice = 10.200.73.149;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -311,25 +349,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E8CEEAE196081DE00F2D0C9 /* Build configuration list for PBXProject "SWISeeStars" */ = {
+		2EA1D42F18BBFC9A007C9FAF /* Build configuration list for PBXProject "SWISeeStars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E8CEEC9196081DE00F2D0C9 /* Debug */,
-				2E8CEECA196081DE00F2D0C9 /* Release */,
+				2EA1D44A18BBFC9A007C9FAF /* Debug */,
+				2EA1D44B18BBFC9A007C9FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E8CEECB196081DE00F2D0C9 /* Build configuration list for PBXNativeTarget "SWISeeStars" */ = {
+		2EA1D44C18BBFC9A007C9FAF /* Build configuration list for PBXNativeTarget "SWISeeStars" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E8CEECC196081DE00F2D0C9 /* Debug */,
-				2E8CEECD196081DE00F2D0C9 /* Release */,
+				2EA1D44D18BBFC9A007C9FAF /* Debug */,
+				2EA1D44E18BBFC9A007C9FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2E8CEEAB196081DE00F2D0C9 /* Project object */;
+	rootObject = 2EA1D42C18BBFC9A007C9FAF /* Project object */;
 }

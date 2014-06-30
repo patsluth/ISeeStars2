@@ -1,16 +1,16 @@
 //
-//  SWBundle.m
-//  SWGestureMusicControls
+//  SWISSBundle.m
+//  SWISeeStars
 //
 //  Created by Pat Sluth on 2014-02-25.
 //
 //
 
-#import "SWBundle.h"
+#import "SWISSBundle.h"
 
-#define SW_GMC_MAIN_BUNDLE_PATH @"/Library/Application Support/SWISS/SWISeeStars.bundle"
+#define SW_ISS_MAIN_BUNDLE_PATH @"/Library/Application Support/SWISeeStars/SWISeeStars.bundle"
 
-@implementation SWBundle
+@implementation SWISSBundle
 
 + (NSBundle *)bundleAtPath:(NSString *)path andLoad:(BOOL)load
 {
@@ -29,12 +29,12 @@
 
 + (NSBundle *)mainBundleAndLoad:(BOOL)load;
 {
-    return [SWBundle bundleAtPath:SW_GMC_MAIN_BUNDLE_PATH andLoad:load];
+    return [SWISSBundle bundleAtPath:SW_ISS_MAIN_BUNDLE_PATH andLoad:load];
 }
 
 + (UIImage *)imageInMainBundleNamed:(NSString *)imageName ofType:(NSString *)imageType
 {
-    return [SWBundle imageInBundle:[SWBundle mainBundleAndLoad:YES]
+    return [SWISSBundle imageInBundle:[SWISSBundle mainBundleAndLoad:YES]
                              named:imageName
                             ofType:imageType];
 }

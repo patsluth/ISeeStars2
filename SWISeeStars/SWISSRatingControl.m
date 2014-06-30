@@ -7,7 +7,7 @@
 //
 
 #import "SWISSRatingControl.h"
-#import "SWBundle.h"
+#import "SWISSBundle.h"
 
 @interface SWISSRatingControl()
 {
@@ -25,8 +25,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        UIImage *star = [SWBundle imageInMainBundleNamed:@"SW_ISS_Star" ofType:@"png"];
-        UIImage *dot = [SWBundle imageInMainBundleNamed:@"SW_ISS_Circle" ofType:@"png"];
+        UIImage *star = [SWISSBundle imageInMainBundleNamed:@"SW_ISS_Star" ofType:@"png"];
+        UIImage *dot = [SWISSBundle imageInMainBundleNamed:@"SW_ISS_Circle" ofType:@"png"];
         
         NSMutableArray *tempStars = [[NSMutableArray alloc] init];
         NSMutableArray *tempDots = [[NSMutableArray alloc] init];
