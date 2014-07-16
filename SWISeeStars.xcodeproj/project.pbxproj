@@ -304,8 +304,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/iOSOpenDev/lib,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SluthwareExtensionsiOS-cgzsvjptwjemophaaechayijevdt/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SWiOSLibrary-dpuxymmupozkbbbuxhbyejkidbek/Build/Products/Debug-iphoneos",
 					"$(PROJECT_DIR)/SWISeeStars/Package/Library/MobileSubstrate/DynamicLibraries",
 				);
 				PRODUCT_NAME = SWISeeStars;
@@ -335,8 +333,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/iOSOpenDev/lib,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SluthwareExtensionsiOS-cgzsvjptwjemophaaechayijevdt/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SWiOSLibrary-dpuxymmupozkbbbuxhbyejkidbek/Build/Products/Debug-iphoneos",
 					"$(PROJECT_DIR)/SWISeeStars/Package/Library/MobileSubstrate/DynamicLibraries",
 				);
 				PRODUCT_NAME = SWISeeStars;
