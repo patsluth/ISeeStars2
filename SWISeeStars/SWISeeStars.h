@@ -16,27 +16,20 @@
 
 @interface MPUDataSource : NSObject <NSCoding>
 {
-    
-	int _entityType;
 }
 
-@property (nonatomic,readonly) int entityType;
-
 @end
-
-
 
 @interface MPUQueryDataSource : MPUDataSource
 {
 	NSArray *_entities;
-    
 }
 
 - (NSArray *)entities; //MPConcreteMediaItems array
 
 @end
 
-#pragma mark Table View
+#pragma mark TableView
 
 
 @interface MPUTableViewController
@@ -51,59 +44,70 @@
 
 @end
 
+#pragma mark TableView Cells
+ 
+
+//base cell for displaying individual songs
+@interface MusicSongTableViewCell : UIView
+{
+}
+
+- (id)songCellContentView;
+
+@end
+
+//cell shown in artist and album tabs
+@interface MusicCollectionTrackTableViewCell : MusicSongTableViewCell
+{
+}
+
+@end
+
+//cell shown in song and playlist tab
+@interface _MusicSongListTableViewCell : MusicSongTableViewCell
+{
+}
+
+@end
+
 
 @interface MusicTableViewCellContentView : UIView
 {
 }
 
-- (id)initWithFrame:(CGRect)arg1;
-
 @end
- 
+
 
 @interface MusicSongTableViewCellContentView : MusicTableViewCellContentView
 {
-    
+}
+
+//%new
+- (void)updateWithMediaItem:(id)mediaItem;
+
+@end
+
+
+//content view for MusicCollectionTrackTableViewCell
+@interface _MusicCollectionTrackTableViewCellContentView : MusicSongTableViewCellContentView
+{
 }
 
 @end
 
 
+//content view for _MusicSongListTableViewCell
 @interface _MusicSongListTableViewCellContentView : MusicSongTableViewCellContentView
 {
 }
 
-//new
-- (void)updateWithMediaItem:(id)mediaItem;
-
-- (NSString *)title;
 - (UILabel *)titleLabel;
-- (NSString *)artist;
 - (UILabel *)artistLabel;
-- (NSString *)album;
 - (UILabel *)albumLabel;
-- (UIImage *)artworkImage;
 - (UIImageView *)artworkImageView;
 
-- (void)layoutForPadInRect:(CGRect)arg1;
-- (void)layoutForPhoneInRect:(CGRect)arg1;
-- (void)layoutSubviews;
-
-- (void)setTitle:(NSString *)arg1;
-- (void)setArtist:(NSString *)arg1;
-- (void)setAlbum:(NSString *)arg1;
-
-- (void)setArtworkImage:(UIImage *)arg1 animated:(BOOL)arg2;
-- (void)setArtworkImage:(UIImage *)arg1;
-
 @end
 
-@interface _MusicSongListTableViewCell : UIView
-{
-}
 
-- (id)songListCellContentView;
-
-@end
 
 

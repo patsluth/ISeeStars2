@@ -36,8 +36,10 @@
             UIImageView *starImage = [[UIImageView alloc] initWithImage:star];
             UIImageView *dotImage = [[UIImageView alloc] initWithImage:dot];
             
-            starImage.frame = CGRectMake(0, star.size.height * x, star.size.width, star.size.height);
-            starImage.center = CGPointMake(self.frame.size.width / 2, starImage.center.y);
+            starImage.frame = CGRectMake(0,
+                                         (self.frame.size.height / 5) * x,
+                                         self.frame.size.width,
+                                         self.frame.size.height / 5);
             
             dotImage.frame = starImage.frame;
             

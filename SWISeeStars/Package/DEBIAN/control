@@ -1,6 +1,6 @@
 Package: com.patsluth.swiseestars
 Name: I See Stars
-Version: 1.0-1
+Version: 1.1
 Description: View music ratings in the playlist tables
 Section: Tweaks
 Depends: firmware (>= 7.1), mobilesubstrate

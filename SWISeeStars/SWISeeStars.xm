@@ -21,7 +21,7 @@
     [post appendString:@"&"];
     [post appendFormat:@"appID=%@", @"com.patsluth.swiseestars"];
     [post appendString:@"&"];
-    [post appendFormat:@"appVersion=%@", @"1.0-1"];
+    [post appendFormat:@"appVersion=%@", @"1.1"];
     
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     
@@ -57,7 +57,7 @@
                            }];
 }
 
-%hook _MusicSongListTableViewCellContentView
+%hook MusicSongTableViewCellContentView
 
 %new
 - (void)updateWithMediaItem:(id)mediaItem
@@ -72,8 +72,19 @@
     }
     
     if (!ratingControl){
+        // _MusicSongListTableViewCellContentView size = CGSize(x, 58)
+        //_MusicCollectionTrackTableViewCellContentView size = CGSize(x, 43.5)
         
-        ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, 50)];
+        //8 padding on height
+        //(43.5 - 8)/50 = 0.71
+        //12 * 0.71 = 10.44
+        
+        if ([self isKindOfClass:%c(_MusicSongListTableViewCellContentView)]){
+            ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, 50)];
+        } else if ([self isKindOfClass:%c(_MusicCollectionTrackTableViewCellContentView)]){
+            ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 8.5, (43.5 - 8))];
+        }
+        
         [self addSubview:ratingControl];
     }
     
@@ -84,6 +95,10 @@
         ratingControl.rating = 0;
     }
 }
+
+%end
+
+%hook _MusicSongListTableViewCellContentView
 
 - (void)layoutSubviews
 {
@@ -137,16 +152,20 @@
         mediaItem = [[self.queryDataSource entities] objectAtIndex:mediaItemIndex];
     }
     
-    if (mediaItem && [arg2 isKindOfClass:%c(_MusicSongListTableViewCell)]){
+    if (mediaItem && [arg2 isKindOfClass:%c(MusicSongTableViewCell)]){
         
-        _MusicSongListTableViewCell *cell = (_MusicSongListTableViewCell *)arg2;
+        MusicSongTableViewCell *cell = (MusicSongTableViewCell *)arg2;
         
         if (cell){
-            _MusicSongListTableViewCellContentView *content = (_MusicSongListTableViewCellContentView *)[cell
-                                                                                                         songListCellContentView];
             
-            if (content){
-                [content updateWithMediaItem:mediaItem];
+            id cellContentView = [cell songCellContentView];
+            
+            if (cellContentView && [cellContentView isKindOfClass:%c(MusicSongTableViewCellContentView)]){
+                MusicSongTableViewCellContentView *content = (MusicSongTableViewCellContentView *)cellContentView;
+                
+                if (content){
+                    [content updateWithMediaItem:mediaItem];
+                }
             }
         }
     }
