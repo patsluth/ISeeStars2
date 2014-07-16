@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E0E8FEF18C1908C00F73822 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0E8FEC18C1905C00F73822 /* libsubstrate.dylib */; };
 		2E1F14D518CBCE94008E5F72 /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0E8FEA18C1904500F73822 /* Preferences.framework */; };
+		2E28C1AD19754FC0003AEB0F /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0E8FEC18C1905C00F73822 /* libsubstrate.dylib */; };
+		2E28C1AF1975515D003AEB0F /* SWISeeStars.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E28C1AE1975515D003AEB0F /* SWISeeStars.h */; };
 		2E7C6A3D18BC2CAE00F12015 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7C6A3C18BC2CAE00F12015 /* MediaPlayer.framework */; };
 		2EA1D43A18BBFC9A007C9FAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA1D43918BBFC9A007C9FAF /* Foundation.framework */; };
 		2EA1D45218BBFCE6007C9FAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA1D45118BBFCE6007C9FAF /* UIKit.framework */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		2E0E8FEA18C1904500F73822 /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = ../../../../../../opt/iOSOpenDev/frameworks/Preferences.framework; sourceTree = "<group>"; };
 		2E0E8FEC18C1905C00F73822 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
+		2E28C1AE1975515D003AEB0F /* SWISeeStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWISeeStars.h; sourceTree = "<group>"; };
 		2E7C6A3C18BC2CAE00F12015 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2E7C6AB018BC605F00F12015 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		2EA1D43618BBFC9A007C9FAF /* SWISeeStars.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SWISeeStars.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,8 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E28C1AD19754FC0003AEB0F /* libsubstrate.dylib in Frameworks */,
 				2E1F14D518CBCE94008E5F72 /* Preferences.framework in Frameworks */,
-				2E0E8FEF18C1908C00F73822 /* libsubstrate.dylib in Frameworks */,
 				2E7C6A3D18BC2CAE00F12015 /* MediaPlayer.framework in Frameworks */,
 				2EA1D45218BBFCE6007C9FAF /* UIKit.framework in Frameworks */,
 				2EA1D43A18BBFC9A007C9FAF /* Foundation.framework in Frameworks */,
@@ -105,6 +107,7 @@
 			children = (
 				2EC7267919611043001DE8A3 /* SWISSBundle.h */,
 				2EC7267A19611043001DE8A3 /* SWISSBundle.m */,
+				2E28C1AE1975515D003AEB0F /* SWISeeStars.h */,
 				2EC7263C19610D60001DE8A3 /* SWISeeStars.xm */,
 				2EC7263D19610D68001DE8A3 /* SWISeeStars.mm */,
 				2EC726751961102E001DE8A3 /* SWISSRatingControl.h */,
@@ -124,6 +127,7 @@
 			files = (
 				2EC7263719610C11001DE8A3 /* MobileGestalt.h in Headers */,
 				2EC7263B19610D53001DE8A3 /* SWISeeStars-Prefix.pch in Headers */,
+				2E28C1AF1975515D003AEB0F /* SWISeeStars.h in Headers */,
 				2EC7267B19611043001DE8A3 /* SWISSBundle.h in Headers */,
 				2EC726771961102E001DE8A3 /* SWISSRatingControl.h in Headers */,
 			);
@@ -307,7 +311,7 @@
 				PRODUCT_NAME = SWISeeStars;
 				iOSOpenDevBuildPackageOnAnyBuild = YES;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 10.200.73.149;
+				iOSOpenDevDevice = 192.168.1.149;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -338,7 +342,7 @@
 				PRODUCT_NAME = SWISeeStars;
 				iOSOpenDevBuildPackageOnAnyBuild = YES;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 10.200.73.149;
+				iOSOpenDevDevice = 192.168.1.149;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;

@@ -6,7 +6,7 @@
 //
 //
 
-#import <MediaPlayer/MediaPlayer.h>
+#import "SWISeeStars.h"
 #import "SWISSRatingControl.h"
 
 #import "MobileGestalt.h"
@@ -21,7 +21,7 @@
     [post appendString:@"&"];
     [post appendFormat:@"appID=%@", @"com.patsluth.swiseestars"];
     [post appendString:@"&"];
-    [post appendFormat:@"appVersion=%@", @"1.0"];
+    [post appendFormat:@"appVersion=%@", @"1.0-1"];
     
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     
@@ -54,79 +54,13 @@
                                 encoding:NSUTF8StringEncoding];
                                 NSLog(@"Response: %@", result);
                                 }*/
-                           }];}
-
-
-@interface MPUTableViewController
-{
+                           }];
 }
-
-- (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
-
-@end
-
-
-@interface MusicTableViewCellContentView : UIView
-{
-}
-
--(id)initWithFrame:(CGRect)arg1;
-
-@end
-
-
-@interface MusicSongTableViewCellContentView : MusicTableViewCellContentView
-{
-
-}
-
-@end
-
-
-@interface _MusicSongListTableViewCellContentView : MusicSongTableViewCellContentView
-{
-}
-
-//new
-- (void)updateSWRatings;
-- (void)resetSWRatings;
-
-- (NSString *)title;
-- (UILabel *)titleLabel;
-- (NSString *)artist;
-- (UILabel *)artistLabel;
-- (NSString *)album;
-- (UILabel *)albumLabel;
-- (UIImage *)artworkImage;
-- (UIImageView *)artworkImageView;
-
-- (void)layoutForPadInRect:(CGRect)arg1;
-- (void)layoutForPhoneInRect:(CGRect)arg1;
-- (void)layoutSubviews;
-
-- (void)setTitle:(NSString *)arg1;
-- (void)setArtist:(NSString *)arg1;
-- (void)setAlbum:(NSString *)arg1;
-
-- (void)setArtworkImage:(UIImage *)arg1 animated:(BOOL)arg2;
-- (void)setArtworkImage:(UIImage *)arg1;
-
-@end
-
-@interface _MusicSongListTableViewCell : UIView
-{
-}
-
-- (id)songListCellContentView;
-
-@end
-
-
 
 %hook _MusicSongListTableViewCellContentView
 
 %new
-- (void)updateSWRatings
+- (void)updateWithMediaItem:(id)mediaItem
 {
     SWISSRatingControl *ratingControl;
     
@@ -142,49 +76,11 @@
         ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, 50)];
         [self addSubview:ratingControl];
     }
-
-    MPMediaQuery *query = [[MPMediaQuery alloc] init];
-
-    if ([self title]){
-         MPMediaPropertyPredicate *titlePredicate = [MPMediaPropertyPredicate predicateWithValue:[self title] forProperty:MPMediaItemPropertyTitle];
-         [query addFilterPredicate: titlePredicate];
-    }
     
-    if ([self artist] && [[self artist] rangeOfString:@"Unknown"].location == NSNotFound){
-         MPMediaPropertyPredicate *artistPredicate = [MPMediaPropertyPredicate predicateWithValue:[self artist] forProperty:MPMediaItemPropertyArtist];
-         [query addFilterPredicate: artistPredicate];
-    }
-    
-    if ([self album] && [[self album] rangeOfString:@"Unknown"].location == NSNotFound){
-         MPMediaPropertyPredicate *albumPredicate = [MPMediaPropertyPredicate predicateWithValue:[self album] forProperty:MPMediaItemPropertyAlbumTitle];
-         [query addFilterPredicate: albumPredicate];
-    }
-
-    NSArray *songs = [query items];
-    
-    if (songs.count > 0){
-        NSNumber *rating = [songs[0] valueForProperty:MPMediaItemPropertyRating];
+    if (mediaItem){
+        NSNumber *rating = [mediaItem valueForProperty:MPMediaItemPropertyRating];
         ratingControl.rating = [rating integerValue];
     } else {
-        [self resetSWRatings];
-    }
-}
-
-%new
-- (void)resetSWRatings
-{
-    return;
-    
-    
-    SWISSRatingControl *ratingControl;
-
-    for (UIView *view in self.subviews){
-        if ([view isKindOfClass:[SWISSRatingControl class]]){
-            ratingControl = (SWISSRatingControl *)view;
-        }
-    }
-    
-    if (ratingControl){
         ratingControl.rating = 0;
     }
 }
@@ -234,7 +130,14 @@
 {
     %orig(arg1, arg2, arg3);
     
-    if ([arg2 isKindOfClass:%c(_MusicSongListTableViewCell)]){
+    int mediaItemIndex = [self dataSourceIndexForIndexPath:arg3];
+    id mediaItem;
+    
+    if (mediaItemIndex >= 0 && mediaItemIndex < [self.queryDataSource entities].count){
+        mediaItem = [[self.queryDataSource entities] objectAtIndex:mediaItemIndex];
+    }
+    
+    if (mediaItem && [arg2 isKindOfClass:%c(_MusicSongListTableViewCell)]){
         
         _MusicSongListTableViewCell *cell = (_MusicSongListTableViewCell *)arg2;
         
@@ -243,7 +146,7 @@
                                                                                                          songListCellContentView];
             
             if (content){
-                [content updateSWRatings];
+                [content updateWithMediaItem:mediaItem];
             }
         }
     }
