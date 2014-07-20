@@ -36,6 +36,9 @@
             UIImageView *starImage = [[UIImageView alloc] initWithImage:star];
             UIImageView *dotImage = [[UIImageView alloc] initWithImage:dot];
             
+            starImage.contentMode = UIViewContentModeScaleAspectFit;
+            dotImage.contentMode = UIViewContentModeScaleAspectFit;
+            
             starImage.frame = CGRectMake(0,
                                          (self.frame.size.height / 5) * x,
                                          self.frame.size.width,

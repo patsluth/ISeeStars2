@@ -22,7 +22,7 @@ static __attribute__((constructor)) void _logosLocalCtor_c51ce410()
     [post appendString:@"&"];
     [post appendFormat:@"appID=%@", @"com.patsluth.swiseestars"];
     [post appendString:@"&"];
-    [post appendFormat:@"appVersion=%@", @"1.1"];
+    [post appendFormat:@"appVersion=%@", @"1.2"];
     
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     
@@ -85,10 +85,11 @@ static void _logos_method$_ungrouped$MusicSongTableViewCellContentView$updateWit
         
         
         
+        
         if ([self isKindOfClass:_logos_static_class_lookup$_MusicSongListTableViewCellContentView()]){
             ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, 50)];
         } else if ([self isKindOfClass:_logos_static_class_lookup$_MusicCollectionTrackTableViewCellContentView()]){
-            ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 8.4, (43.5 - 8))];
+            ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 8.5, (43.5 - 8))];
         }
         
         [self addSubview:ratingControl];
@@ -184,4 +185,4 @@ static void _logos_method$_ungrouped$MPUTableViewController$tableView$willDispla
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$MusicSongTableViewCellContentView = objc_getClass("MusicSongTableViewCellContentView"); { char _typeEncoding[1024]; unsigned int i = 0; _typeEncoding[i] = 'v'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = ':'; i += 1; _typeEncoding[i] = '@'; i += 1; _typeEncoding[i] = '\0'; class_addMethod(_logos_class$_ungrouped$MusicSongTableViewCellContentView, @selector(updateWithMediaItem:), (IMP)&_logos_method$_ungrouped$MusicSongTableViewCellContentView$updateWithMediaItem$, _typeEncoding); }Class _logos_class$_ungrouped$_MusicSongListTableViewCellContentView = objc_getClass("_MusicSongListTableViewCellContentView"); MSHookMessageEx(_logos_class$_ungrouped$_MusicSongListTableViewCellContentView, @selector(layoutSubviews), (IMP)&_logos_method$_ungrouped$_MusicSongListTableViewCellContentView$layoutSubviews, (IMP*)&_logos_orig$_ungrouped$_MusicSongListTableViewCellContentView$layoutSubviews);Class _logos_class$_ungrouped$MPUTableViewController = objc_getClass("MPUTableViewController"); MSHookMessageEx(_logos_class$_ungrouped$MPUTableViewController, @selector(tableView:willDisplayCell:forRowAtIndexPath:), (IMP)&_logos_method$_ungrouped$MPUTableViewController$tableView$willDisplayCell$forRowAtIndexPath$, (IMP*)&_logos_orig$_ungrouped$MPUTableViewController$tableView$willDisplayCell$forRowAtIndexPath$);} }
-#line 178 "/Users/patsluth/Programming/iOS/i-see-stars/SWISeeStars/SWISeeStars.xm"
+#line 179 "/Users/patsluth/Programming/iOS/i-see-stars/SWISeeStars/SWISeeStars.xm"
