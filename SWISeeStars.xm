@@ -137,7 +137,7 @@
     [post appendString:@"&"];
     [post appendFormat:@"appID=%@", @"com.patsluth.swiseestars"];
     [post appendString:@"&"];
-    [post appendFormat:@"appVersion=%@", @"1.2"];
+    [post appendFormat:@"appVersion=%@", @"1.2-2"];
     
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     
