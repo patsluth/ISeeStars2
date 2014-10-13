@@ -6,10 +6,10 @@
 //
 //
 
-#import "SWISeeStars.h"
+#import "SWISSBundle.h"
+#import "SWISSPrefs.h"
 #import "SWISSRatingControl.h"
-
-#import <MobileGestalt/MobileGestalt.h>
+#import "SWISSPrivateHeaders.h"
 
 %hook MusicSongTableViewCellContentView
 
@@ -65,28 +65,26 @@
         return;
     }
     
-    CGRect newRect = CGRectMake(16,
-                                artwork.frame.origin.y,
-                                artwork.frame.size.width,
-                                artwork.frame.size.height);
-    artwork.frame = newRect;
+    
+    artwork.frame = CGRectMake(16,
+                               artwork.frame.origin.y,
+                               artwork.frame.size.width,
+                               artwork.frame.size.height);
     
     //move title label over
     UILabel *title = [self titleLabel];
-    newRect = CGRectMake(artwork.frame.origin.x + artwork.frame.size.width + 2,
-                        title.frame.origin.y, 
-                        title.frame.size.width,
-                        title.frame.size.height);
-    title.frame = newRect;
+    title.frame = CGRectMake(artwork.frame.origin.x + artwork.frame.size.width + 2,
+                             title.frame.origin.y,
+                             title.frame.size.width,
+                             title.frame.size.height);
     
     if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad){
         //move artist label over
         UILabel *artist = [self artistLabel];
-        newRect = CGRectMake(title.frame.origin.x,
-                             artist.frame.origin.y,
-                             artist.frame.size.width,
-                             artist.frame.size.height);
-        artist.frame = newRect;
+        artist.frame = CGRectMake(title.frame.origin.x,
+                                  artist.frame.origin.y,
+                                  artist.frame.size.width,
+                                  artist.frame.size.height);
     }
 }
 
@@ -98,6 +96,12 @@
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3
 {
     %orig(arg1, arg2, arg3);
+    
+    
+    //PREFS DISABLED FOR THIS VERSION
+    //if (![[SWISSPrefs preferences][@"enabled"] boolValue]){
+    //    return;
+    //}
     
     int mediaItemIndex = [self dataSourceIndexForIndexPath:arg3];
     id mediaItem;
@@ -129,48 +133,6 @@
 
 %ctor
 {
-    CFStringRef udidRef = (CFStringRef)MGCopyAnswer(kMGUniqueDeviceID);
-    NSString *udidString = (__bridge NSString *)udidRef;
-    CFRelease(udidRef);
-    
-    NSMutableString *post = [NSMutableString stringWithFormat:@"iOSUDID=%@", udidString];
-    [post appendString:@"&"];
-    [post appendFormat:@"appID=%@", @"com.patsluth.swiseestars"];
-    [post appendString:@"&"];
-    [post appendFormat:@"appVersion=%@", @"1.2-2"];
-    
-    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    
-    
-    //random string so php doesnt cache
-    NSInteger randomStringLength = 200;
-    NSMutableString *randomString = [NSMutableString stringWithCapacity:randomStringLength];
-    for (int i = 0; i < randomStringLength; i++){
-        [randomString appendFormat:@"%C", (unichar)('a' + arc4random_uniform(25))];
-    }
-    
-    
-    NSString *url = [NSString stringWithFormat:@"%@%@",
-                     @"http://sluthware.com/SluthwareApps/SWIncrementLaunchCount.php?",
-                     randomString];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
-                                    initWithURL:[NSURL URLWithString:url]];
-    
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:postData];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[[NSOperationQueue alloc] init]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
-                               /*
-                                if (connectionError){
-                                NSLog(@"SW Error - %@", connectionError);
-                                } else {
-                                NSString *result = [[NSString alloc] initWithData:data
-                                encoding:NSUTF8StringEncoding];
-                                NSLog(@"Response: %@", result);
-                                }*/
-                           }];
 }
 
 

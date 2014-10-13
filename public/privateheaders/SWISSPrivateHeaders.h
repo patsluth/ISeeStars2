@@ -6,10 +6,6 @@
 //
 //
 
-#ifndef SWISeeStars_SWISeeStars_h
-#define SWISeeStars_SWISeeStars_h
-#endif
-
 #import <MediaPlayer/MediaPlayer.h>
 
 #pragma mark MPDataSource

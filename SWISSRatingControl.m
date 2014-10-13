@@ -6,9 +6,8 @@
 //
 //
 
+#import "SWISSBundle.h"
 #import "SWISSRatingControl.h"
-
-#define SW_ISS_BUNDLE_PATH @"/Library/Application Support/SWISeeStarsBundle.bundle"
 
 @interface SWISSRatingControl()
 {
@@ -28,12 +27,13 @@
     if (self) {
         
         NSBundle *bundle = [NSBundle bundleWithPath:SW_ISS_BUNDLE_PATH];
-        [bundle load];
         
         if (bundle){
             
-            UIImage *star = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"SW_ISS_Star" ofType:@"png"]];
-            UIImage *dot = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"SW_ISS_Circle" ofType:@"png"]];
+            UIImage *star = [[UIImage imageWithContentsOfFile:[bundle pathForResource:@"SW_ISS_Star" ofType:@"png"]]
+                             imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];;
+            UIImage *dot = [[UIImage imageWithContentsOfFile:[bundle pathForResource:@"SW_ISS_Circle" ofType:@"png"]]
+                            imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];;
             
             NSMutableArray *tempStars = [[NSMutableArray alloc] init];
             NSMutableArray *tempDots = [[NSMutableArray alloc] init];
