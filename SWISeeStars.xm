@@ -1,17 +1,70 @@
-//
-//  SWISeeStars.xm
-//  SWISeeStars
-//
-//  Created by Pat Sluth on 2014-06-29.
-//
-//
 
 #import "SWISSBundle.h"
 #import "SWISSPrefs.h"
 #import "SWISSRatingControl.h"
+
+#import <libsw/sluthwareios/sluthwareios.h>
+
+
+
 #import "SWISSPrivateHeaders.h"
 
-%hook MusicSongTableViewCellContentView
+
+
+
+
+
+
+
+
+
+
+@interface MusicTableViewCellContentView : UIView
+{
+}
+
+//iOS 7 & 8
+- (UIView *)titleLabel;
+
+//iOS 7
+- (UIView *)artistLabel;
+- (UIView *)albumLabel;
+- (UIView *)artworkImageView;
+- (id)songCellContentView;
+
+//iOS 8
+- (UIView *)subtitleLabel;
+- (UIView *)detailLabel;
+- (UIView *)artworkView;
+- (id)_mediaCellContentView;
+
+- (void)updateWithMediaItem:(id)mediaItem;
+- (void)postLayoutSubviews;
+
+@end
+
+@interface _MusicSongListTableViewCellContentView : MusicTableViewCellContentView //iOS 7
+{
+}
+
+@end
+
+@interface MusicSongListTableViewCellContentView : MusicTableViewCellContentView //iOS 8
+{
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+%hook MusicTableViewCellContentView
 
 %new
 - (void)updateWithMediaItem:(id)mediaItem
@@ -26,19 +79,7 @@
     }
     
     if (!ratingControl){
-        // _MusicSongListTableViewCellContentView size = CGSize(x, 58)
-        //_MusicCollectionTrackTableViewCellContentView size = CGSize(x, 43.5)
-        
-        //8 padding on height
-        //(43.5 - 8)/50 = 0.71
-        //12 * 0.71 = 10.44
-        
-        if ([self isKindOfClass:%c(_MusicSongListTableViewCellContentView)]){
-            ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, 50)];
-        } else if ([self isKindOfClass:%c(_MusicCollectionTrackTableViewCellContentView)]){
-            ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 8.5, (43.5 - 8))];
-        }
-        
+        ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, self.frame.size.height - 8)]; //4 padding
         [self addSubview:ratingControl];
     }
     
@@ -50,6 +91,71 @@
     }
 }
 
+%new
+- (void)postLayoutSubviews
+{
+    //move artwork over
+    UIView *artwork;
+    
+    if ([self respondsToSelector:@selector(artworkImageView)]){
+        artwork = [self artworkImageView];
+    } else if ([self respondsToSelector:@selector(artworkView)]){
+        artwork = [self artworkView];
+    }
+    
+    if (!artwork){
+        return;
+    }
+    
+    [artwork setOriginX:artwork.frame.origin.x + 14];
+    
+    
+    
+    
+    
+    UIView *primaryLabel;
+    
+    if ([self respondsToSelector:@selector(titleLabel)]){
+        primaryLabel = [self titleLabel];
+    }
+    
+    if (primaryLabel){
+        [primaryLabel setOriginX:primaryLabel.frame.origin.x + 14];
+    }
+    
+    
+    
+    
+    
+    UIView *secondaryLabel;
+    
+    if ([self respondsToSelector:@selector(artistLabel)]){
+        secondaryLabel = [self artistLabel];
+    } else if ([self respondsToSelector:@selector(subtitleLabel)]){
+        secondaryLabel = [self subtitleLabel];
+    }
+    
+    if (secondaryLabel){
+        [secondaryLabel setOriginX:secondaryLabel.frame.origin.x + 14];
+    }
+    
+    
+    
+    
+    
+    UIView *thirdaryLabel; //is thirdary a word?
+    
+    if ([self respondsToSelector:@selector(albumLabel)]){
+        thirdaryLabel = [self albumLabel];
+    } else if ([self respondsToSelector:@selector(detailLabel)]){
+        thirdaryLabel = [self detailLabel];
+    }
+    
+    if (thirdaryLabel){
+        [thirdaryLabel setOriginX:thirdaryLabel.frame.origin.x + 14];
+    }
+}
+
 %end
 
 %hook _MusicSongListTableViewCellContentView
@@ -58,37 +164,28 @@
 {
     %orig();
     
-    //move artwork over
-    UIImageView *artwork = [self artworkImageView];
-    
-    if (!artwork){
-        return;
-    }
-    
-    
-    artwork.frame = CGRectMake(16,
-                               artwork.frame.origin.y,
-                               artwork.frame.size.width,
-                               artwork.frame.size.height);
-    
-    //move title label over
-    UILabel *title = [self titleLabel];
-    title.frame = CGRectMake(artwork.frame.origin.x + artwork.frame.size.width + 2,
-                             title.frame.origin.y,
-                             title.frame.size.width,
-                             title.frame.size.height);
-    
-    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad){
-        //move artist label over
-        UILabel *artist = [self artistLabel];
-        artist.frame = CGRectMake(title.frame.origin.x,
-                                  artist.frame.origin.y,
-                                  artist.frame.size.width,
-                                  artist.frame.size.height);
+    if ([self respondsToSelector:@selector(postLayoutSubviews)]){
+        [self postLayoutSubviews];
     }
 }
 
 %end
+
+%hook MusicSongListTableViewCellContentView
+
+- (void)layoutSubviews
+{
+    %orig();
+    
+    if ([self respondsToSelector:@selector(postLayoutSubviews)]){
+        [self postLayoutSubviews];
+    }
+}
+
+%end
+
+
+
 
 
 %hook MPUTableViewController
@@ -96,7 +193,6 @@
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3
 {
     %orig(arg1, arg2, arg3);
-    
     
     //PREFS DISABLED FOR THIS VERSION
     //if (![[SWISSPrefs preferences][@"enabled"] boolValue]){
@@ -110,21 +206,19 @@
         mediaItem = [[self.queryDataSource entities] objectAtIndex:mediaItemIndex];
     }
     
-    if (mediaItem && [arg2 isKindOfClass:%c(MusicSongTableViewCell)]){
+    if (mediaItem && [mediaItem isKindOfClass:%c(MPConcreteMediaItem)]){ //only show for media items silly willy
         
-        MusicSongTableViewCell *cell = (MusicSongTableViewCell *)arg2;
+        id musicCellContentView;
         
-        if (cell){
-            
-            id cellContentView = [cell songCellContentView];
-            
-            if (cellContentView && [cellContentView isKindOfClass:%c(MusicSongTableViewCellContentView)]){
-                MusicSongTableViewCellContentView *content = (MusicSongTableViewCellContentView *)cellContentView;
-                
-                if (content){
-                    [content updateWithMediaItem:mediaItem];
-                }
-            }
+        if ([arg2 respondsToSelector:@selector(songCellContentView)]){ //iOS 7
+            musicCellContentView = [arg2 songCellContentView];
+        } else if ([arg2 respondsToSelector:@selector(_mediaCellContentView)]){ //iOS 8
+            musicCellContentView = [arg2 _mediaCellContentView];
+        }
+        
+        if (musicCellContentView && [musicCellContentView respondsToSelector:@selector(updateWithMediaItem:)]){
+            [musicCellContentView performSelectorOnMainThread:@selector(updateWithMediaItem:) withObject:mediaItem waitUntilDone:NO];
+            [musicCellContentView layoutSubviews];
         }
     }
 }

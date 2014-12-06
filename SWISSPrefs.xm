@@ -1,10 +1,3 @@
-//
-//  SWISSPrefs.xm
-//  SWISeeStars
-//
-//  Created by Pat Sluth on 2014-06-29.
-//
-//
 
 #import "SWISSPrefs.h"
 
