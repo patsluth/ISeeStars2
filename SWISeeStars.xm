@@ -5,60 +5,7 @@
 
 #import <libsw/sluthwareios/sluthwareios.h>
 
-
-
 #import "SWISSPrivateHeaders.h"
-
-
-
-
-
-
-
-
-
-
-
-@interface MusicTableViewCellContentView : UIView
-{
-}
-
-//iOS 7 & 8
-- (UIView *)titleLabel;
-
-//iOS 7
-- (UIView *)artistLabel;
-- (UIView *)albumLabel;
-- (UIView *)artworkImageView;
-- (id)songCellContentView;
-
-//iOS 8
-- (UIView *)subtitleLabel;
-- (UIView *)detailLabel;
-- (UIView *)artworkView;
-- (id)_mediaCellContentView;
-
-- (void)updateWithMediaItem:(id)mediaItem;
-- (void)postLayoutSubviews;
-
-@end
-
-@interface _MusicSongListTableViewCellContentView : MusicTableViewCellContentView //iOS 7
-{
-}
-
-@end
-
-@interface MusicSongListTableViewCellContentView : MusicTableViewCellContentView //iOS 8
-{
-}
-
-@end
-
-
-
-
-
 
 
 

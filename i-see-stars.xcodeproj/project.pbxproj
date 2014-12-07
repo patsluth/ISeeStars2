@@ -1,0 +1,86 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		2EC6EAE31A33EB25004B5249 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
+		2EC6EAE41A33EB3E004B5249 /* ISeeStars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = ISeeStars.plist; sourceTree = "<group>"; };
+		2EC6EAE51A33EB44004B5249 /* SWISSRatingControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWISSRatingControl.m; sourceTree = "<group>"; };
+		2EC6EAE61A33EB4A004B5249 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		2EC6EAE71A33EB4A004B5249 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISeeStars.xm; sourceTree = "<group>"; };
+		2EC6EAE81A33EB4A004B5249 /* SWISSPrefs.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISSPrefs.xm; sourceTree = "<group>"; };
+		2EC6EAE91A33EB4F004B5249 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		2EC6EAEA1A33EB57004B5249 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2EC6EADC1A33EAEB004B5249 = {
+			isa = PBXGroup;
+			children = (
+				2EC6EAEA1A33EB57004B5249 /* layout */,
+				2EC6EAE31A33EB25004B5249 /* public */,
+				2EC6EAE91A33EB4F004B5249 /* Resources */,
+				2EC6EAE61A33EB4A004B5249 /* Makefile */,
+				2EC6EAE41A33EB3E004B5249 /* ISeeStars.plist */,
+				2EC6EAE51A33EB44004B5249 /* SWISSRatingControl.m */,
+				2EC6EAE71A33EB4A004B5249 /* SWISeeStars.xm */,
+				2EC6EAE81A33EB4A004B5249 /* SWISSPrefs.xm */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		2EC6EADD1A33EAEB004B5249 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 2EC6EAE01A33EAEB004B5249 /* Build configuration list for PBXProject "i-see-stars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2EC6EADC1A33EAEB004B5249;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		2EC6EAE11A33EAEB004B5249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2EC6EAE21A33EAEB004B5249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EC6EAE01A33EAEB004B5249 /* Build configuration list for PBXProject "i-see-stars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EC6EAE11A33EAEB004B5249 /* Debug */,
+				2EC6EAE21A33EAEB004B5249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EC6EADD1A33EAEB004B5249 /* Project object */;
+}
