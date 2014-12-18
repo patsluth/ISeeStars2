@@ -20,7 +20,7 @@
 
 #pragma mark TableView
 
-@interface MPUTableViewController
+@interface MPUTableViewController : UITableViewController
 {
     MPUQueryDataSource *_queryDataSource;
 }
