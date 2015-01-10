@@ -49,6 +49,9 @@ void *handle;
 {
     [super viewWillAppear:animated];
     
+    self.table.showsHorizontalScrollIndicator = NO;
+    self.table.showsVerticalScrollIndicator = NO;
+    
     if ([SWDeviceInfo iOSVersion_First] == 8){
         
         self.table.backgroundColor = [UIColor clearColor];

@@ -165,7 +165,7 @@
             
             [musicCellContentView performSelectorOnMainThread:@selector(updateWithMediaItem:) withObject:mediaItem waitUntilDone:NO];
             
-            [musicCellContentView performSelectorOnMainThread:@selector(setTintColor:) withObject:self.navigationController.navigationBar.tintColor waitUntilDone:NO];
+            [musicCellContentView performSelectorOnMainThread:@selector(setTintColor:) withObject:self.view.window.tintColor waitUntilDone:NO];
             [musicCellContentView layoutSubviews];
         }
     }

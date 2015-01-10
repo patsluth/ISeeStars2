@@ -16,13 +16,13 @@
 		<string>https://bitbucket.org/patsluth/i-see-stars.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iseestarsprefs/iseestarsprefs.xcodeproj</string>
+	<string>i-see-stars/iseestarsprefs/iseestarsprefs.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>425AA43F65BC6D1862A70E9600F671B28FB3C681</key>
-		<string>../../..</string>
-		<key>486BE6F979FF35EF0B2073FFD8DB44C43FC9E803</key>
 		<string>../../../..</string>
+		<key>486BE6F979FF35EF0B2073FFD8DB44C43FC9E803</key>
+		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://bitbucket.org/patsluth/i-see-stars.git</string>
