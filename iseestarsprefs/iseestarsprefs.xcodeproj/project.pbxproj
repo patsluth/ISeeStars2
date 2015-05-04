@@ -1,0 +1,80 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		2EB531991A3B625000D2930C /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
+		2EB5319A1A3B625F00D2930C /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		2EB5319B1A3B626900D2930C /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		2EB5319C1A3B626E00D2930C /* entry.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = entry.plist; sourceTree = "<group>"; };
+		2EB5319D1A3B627500D2930C /* SWISeeStarsPrefsListController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SWISeeStarsPrefsListController.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2EB531921A3B622600D2930C = {
+			isa = PBXGroup;
+			children = (
+				2EB531991A3B625000D2930C /* public */,
+				2EB5319A1A3B625F00D2930C /* Resources */,
+				2EB5319B1A3B626900D2930C /* Makefile */,
+				2EB5319C1A3B626E00D2930C /* entry.plist */,
+				2EB5319D1A3B627500D2930C /* SWISeeStarsPrefsListController.mm */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		2EB531931A3B622600D2930C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 2EB531961A3B622600D2930C /* Build configuration list for PBXProject "iseestarsprefs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2EB531921A3B622600D2930C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		2EB531971A3B622600D2930C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2EB531981A3B622600D2930C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EB531961A3B622600D2930C /* Build configuration list for PBXProject "iseestarsprefs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EB531971A3B622600D2930C /* Debug */,
+				2EB531981A3B622600D2930C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EB531931A3B622600D2930C /* Project object */;
+}

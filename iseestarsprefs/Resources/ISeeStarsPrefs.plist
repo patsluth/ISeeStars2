@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>key</key>
+			<string>tintcolor_enabled</string>
+			<key>default</key>
+			<false/>
+			<key>label</key>
+			<string>Use App Tint</string>
+			<key>defaults</key>
+			<string>com.patsluth.ISeeStarsPrefs</string>
+			<key>PostNotification</key>
+			<string>com.patsluth.ISeeStarsPrefs.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string></string>
+			<key>footerText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>SWPSTwitterCell</string>
+			<key>username</key>
+			<string>patsluth</string>
+			<key>secondaryText</key>
+			<string>Developer</string>
+			<key>imagePath</key>
+			<string>/Library/PreferenceBundles/ISeeStarsPrefs.bundle/Developer_Twitter_Profile.jpeg</string>
+			<key>action</key>
+			<string>viewTwitterProfile:</string>
+			<key>height</key>
+			<integer>80</integer>
+		</dict>
+		<dict>
+			<key>cellClass</key>
+			<string>SWPSTwitterCell</string>
+			<key>username</key>
+			<string>stijn_d3sign</string>
+			<key>secondaryText</key>
+			<string>Designer</string>
+			<key>imagePath</key>
+			<string>/Library/PreferenceBundles/ISeeStarsPrefs.bundle/Designer_Twitter_Profile.png</string>
+			<key>action</key>
+			<string>viewTwitterProfile:</string>
+			<key>height</key>
+			<integer>80</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>label</key>
+			<string></string>
+			<key>footerText</key>
+			<string>© 2014 Pat Sluth - Sluthware</string>
+		</dict>
+		<dict>
+			<key>key</key>
+			<string>version</string>
+			<key>cell</key>
+			<string>PSTitleValueCell</string>
+			<key>get</key>
+			<string>getVersionNumberForSpecifier:</string>
+			<key>label</key>
+			<string>Version</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>I See Stars</string>
+</dict>
+</plist>
