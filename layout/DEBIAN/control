@@ -1,6 +1,6 @@
 Package: com.patsluth.swiseestars
 Name: I See Stars
-Depends: firmware (>= 7.1), mobilesubstrate, com.patsluth.libsw (= 1.0-4)
+Depends: firmware (>= 7.1), mobilesubstrate, com.patsluth.libsw
 Architecture: iphoneos-arm
 Description: View music ratings in the playlist tables
 Maintainer: Pat Sluth
