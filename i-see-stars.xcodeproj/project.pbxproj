@@ -7,28 +7,24 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		2EB5319E1A3B653800D2930C /* SWISeeStarsPrefsBridge.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISeeStarsPrefsBridge.xm; sourceTree = "<group>"; };
-		2EC6EAE31A33EB25004B5249 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
-		2EC6EAE41A33EB3E004B5249 /* ISeeStars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = ISeeStars.plist; sourceTree = "<group>"; };
-		2EC6EAE51A33EB44004B5249 /* SWISSRatingControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWISSRatingControl.m; sourceTree = "<group>"; };
-		2EC6EAE61A33EB4A004B5249 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		2EC6EAE71A33EB4A004B5249 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISeeStars.xm; sourceTree = "<group>"; };
-		2EC6EAE91A33EB4F004B5249 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
-		2EC6EAEA1A33EB57004B5249 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
+		2E9265101B52CA7A00501112 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = layout; path = "i-see-stars/layout"; sourceTree = "<group>"; };
+		2E9265111B52CA9600501112 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = "i-see-stars/public"; sourceTree = "<group>"; };
+		2E9265121B52CA9F00501112 /* ISeeStars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = ISeeStars.plist; path = "i-see-stars/ISeeStars.plist"; sourceTree = "<group>"; };
+		2E9265131B52CAA700501112 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = "i-see-stars/Makefile"; sourceTree = "<group>"; };
+		2E9265141B52CABE00501112 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = SWISeeStars.xm; path = "i-see-stars/SWISeeStars.xm"; sourceTree = "<group>"; };
+		2E9265151B52CABE00501112 /* SWISeeStarsPrefsBridge.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = SWISeeStarsPrefsBridge.xm; path = "i-see-stars/SWISeeStarsPrefsBridge.xm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		2EC6EADC1A33EAEB004B5249 = {
 			isa = PBXGroup;
 			children = (
-				2EC6EAEA1A33EB57004B5249 /* layout */,
-				2EC6EAE31A33EB25004B5249 /* public */,
-				2EC6EAE91A33EB4F004B5249 /* Resources */,
-				2EC6EAE61A33EB4A004B5249 /* Makefile */,
-				2EC6EAE41A33EB3E004B5249 /* ISeeStars.plist */,
-				2EC6EAE51A33EB44004B5249 /* SWISSRatingControl.m */,
-				2EC6EAE71A33EB4A004B5249 /* SWISeeStars.xm */,
-				2EB5319E1A3B653800D2930C /* SWISeeStarsPrefsBridge.xm */,
+				2E9265101B52CA7A00501112 /* layout */,
+				2E9265111B52CA9600501112 /* public */,
+				2E9265121B52CA9F00501112 /* ISeeStars.plist */,
+				2E9265131B52CAA700501112 /* Makefile */,
+				2E9265141B52CABE00501112 /* SWISeeStars.xm */,
+				2E9265151B52CABE00501112 /* SWISeeStarsPrefsBridge.xm */,
 			);
 			sourceTree = "<group>";
 		};
