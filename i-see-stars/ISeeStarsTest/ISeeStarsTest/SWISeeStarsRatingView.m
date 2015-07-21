@@ -27,7 +27,7 @@
 
 @implementation SWISeeStarsRatingView
 
-- (id)init
+- (id)initWithDotsImage:(UIImage *)dotsImage andStarsImage:(UIImage *)starsImage
 {
     self = [super init];
     
@@ -35,13 +35,16 @@
         
         self.translatesAutoresizingMaskIntoConstraints = NO;
         self.clipsToBounds = YES;
+        self.tag = 696969;
         self.backgroundColor = [UIColor clearColor];
         
-        self.dots = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Dots"]];
+        self.dots = [[UIImageView alloc] initWithImage:[dotsImage
+                                                        imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         self.dots.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:self.dots];
         
-        self.stars = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Stars"]];
+        self.stars = [[UIImageView alloc] initWithImage:[starsImage
+                                                         imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         self.stars.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:self.stars];
         
@@ -56,6 +59,8 @@
     if (rating < 0) rating = 0;
     if (rating > 5) rating = 5;
     
+    _rating = rating;
+    
     if (!CGRectIsEmpty(self.bounds)){
         
         CGRect starFrame = self.bounds;
@@ -67,8 +72,6 @@
         self.stars.frame = starFrame;
         
     }
-    
-    _rating = rating;
 }
 
 - (void)layoutSubviews

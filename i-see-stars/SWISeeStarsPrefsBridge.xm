@@ -1,9 +1,13 @@
 
 #import "SWISeeStarsPrefsBridge.h"
 
-#define SW_ISEESTARS_PREFERENCES_PATH @"/User/Library/Preferences/com.patsluth.ISeeStarsPrefs.plist"
+#define SW_ISEESTARS_PREFERENCES_PATH @"/User/Library/Preferences/com.patsluth.ISeeStarsPrefs2.plist"
 
 static NSDictionary *_preferences;
+
+
+
+
 
 @implementation SWISeeStarsPrefsBridge
 
@@ -14,6 +18,10 @@ static NSDictionary *_preferences;
 
 @end
 
+
+
+
+
 static void prefsChanged(CFNotificationCenterRef center,
                          void *observer,
                          CFStringRef name,
@@ -23,13 +31,17 @@ static void prefsChanged(CFNotificationCenterRef center,
     _preferences = [[NSDictionary alloc] initWithContentsOfFile:SW_ISEESTARS_PREFERENCES_PATH];
 }
 
+
+
+
+
 %ctor
 {
     CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
     CFNotificationCenterAddObserver(darwin,
                                     nil,
                                     prefsChanged,
-                                    CFSTR("com.patsluth.ISeeStarsPrefs.changed"),
+                                    CFSTR("com.patsluth.ISeeStarsPrefs2.changed"),
                                     nil,
                                     CFNotificationSuspensionBehaviorCoalesce);
     // Load preferences

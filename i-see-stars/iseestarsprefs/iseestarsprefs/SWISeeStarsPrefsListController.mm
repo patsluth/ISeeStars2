@@ -34,7 +34,7 @@
 - (id)specifiers
 {
     if(_specifiers == nil){
-        _specifiers = [self loadSpecifiersFromPlistName:@"ISeeStarsPrefs" target:self];
+        _specifiers = [self loadSpecifiersFromPlistName:@"ISeeStarsPrefs2" target:self];
     }
     
     return _specifiers;
@@ -44,7 +44,7 @@
 
 - (NSString *)bundlePath
 {
-    return @"/Library/PreferenceBundles/ISeeStarsPrefs.bundle";
+    return @"/Library/PreferenceBundles/ISeeStarsPrefs2.bundle";
 }
 
 - (NSString *)displayName
@@ -54,7 +54,7 @@
 
 - (NSString *)plistPath
 {
-    return @"/User/Library/Preferences/com.patsluth.ISeeStarsPrefs.plist";
+    return @"/User/Library/Preferences/com.patsluth.ISeeStarsPrefs2.plist";
 }
 
 #pragma mark Twitter

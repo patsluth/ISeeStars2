@@ -1,177 +1,157 @@
 
 #import "SWISeeStarsPrefsBridge.h"
-#import "SWISSRatingControl.h"
+#import "SWISeeStarsRatingView.h"
 
 #import <libSluthware.h>
 
-#import "SWISSPrivateHeaders.h"
+#import <MediaPlayer/MediaPlayer.h>
+
+#import <objc/runtime.h>
 
 
 
 
 
-%hook MusicTableViewCellContentView
-
-%new
-- (void)updateWithMediaItem:(id)mediaItem
+@interface MusicEntityValueProviding : NSObject
 {
-    SWISSRatingControl *ratingControl;
-    
-    for (UIView *view in self.subviews)
-    {
-        if ([view isKindOfClass:[SWISSRatingControl class]]){
-            ratingControl = (SWISSRatingControl *)view;
-        }
-    }
-    
-    if (!ratingControl){
-        ratingControl = [[SWISSRatingControl alloc] initWithFrame:CGRectMake(2, 4, 12, self.frame.size.height - 8)]; //4 padding
-        [self addSubview:ratingControl];
-    }
-    
-    UIImageRenderingMode renderingMode = [[SWISeeStarsPrefsBridge preferences][@"tintcolor_enabled"] boolValue] ? UIImageRenderingModeAlwaysTemplate : UIImageRenderingModeAlwaysOriginal;
-    
-    [ratingControl updateRenderingMode:renderingMode];
-    
-    if (mediaItem){
-        NSNumber *rating = [mediaItem valueForProperty:MPMediaItemPropertyRating];
-        ratingControl.rating = [rating integerValue];
-    } else {
-        ratingControl.rating = 0;
-    }
 }
 
-%new
-- (void)postLayoutSubviews
+//<MusicEntityValueProviding> MPConcreteMediaItem ?????
+//Double check class at runtime
+- (id)baseEntityValueProvider;
+
+@end
+
+
+@interface MusicEntityAbstractLockupView : UIView
 {
-    //move artwork over
-    UIView *artwork;
+}
+
+@property (nonatomic, retain) MusicEntityValueProviding *entityValueProvider;
+
+@end
+
+
+
+
+
+%hook MusicEntityAbstractLockupView
+
+%new
+- (void)iSeeStars_addRatingView
+{
+    SWISeeStarsRatingView *rating = (SWISeeStarsRatingView *)[self viewWithTag:696969];
+    NSInteger ratingValue = 0;
     
-    if ([self respondsToSelector:@selector(artworkImageView)]){
-        artwork = [self artworkImageView];
-    } else if ([self respondsToSelector:@selector(artworkView)]){
-        artwork = [self artworkView];
-    }
+    id entityProvider = self.entityValueProvider.baseEntityValueProvider;
     
-    if (!artwork){
+    if (entityProvider && [[entityProvider class] isSubclassOfClass:[MPMediaEntity class]]){
+        
+        MPMediaEntity *mediaItem = (MPMediaEntity *)entityProvider;
+        NSNumber *itemRating = [mediaItem valueForProperty:MPMediaItemPropertyRating];
+        
+        if (!itemRating){
+            if (rating){ [rating removeFromSuperview]; }
+            return;
+        }
+        
+        ratingValue = [itemRating integerValue];
+        
+    } else { //if the cell doesnt have a media item, it isnt a media cell
+        if (rating){ [rating removeFromSuperview]; }
         return;
     }
     
-    artwork.frame = CGRectOffset(artwork.frame, 14, 0);
-    
-    
-    
-    
-    
-    UIView *primaryLabel;
-    
-    if ([self respondsToSelector:@selector(titleLabel)]){
-        primaryLabel = [self titleLabel];
+    if (!rating){
+        
+        NSBundle *bundle = [NSBundle bundleWithPath:@"/Library/Application Support/ISeeStarsSupport.bundle"];
+        
+        if (bundle){
+            
+            UIImage *dots = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"Dots" ofType:@"png"]];
+            UIImage *stars = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"Stars" ofType:@"png"]];
+            
+            rating = [[SWISeeStarsRatingView alloc] initWithDotsImage:dots
+                                                        andStarsImage:stars];
+            [self addSubview:rating];
+            
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:rating
+                                                             attribute:NSLayoutAttributeLeading
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self
+                                                             attribute:NSLayoutAttributeLeading
+                                                            multiplier:1.0
+                                                              constant:0.0]];
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:rating
+                                                             attribute:NSLayoutAttributeWidth
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:nil
+                                                             attribute:NSLayoutAttributeNotAnAttribute
+                                                            multiplier:1.0
+                                                              constant:16]]; //artwork origin (taken from flex)
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:rating
+                                                             attribute:NSLayoutAttributeCenterY
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self
+                                                             attribute:NSLayoutAttributeCenterY
+                                                            multiplier:1.0
+                                                              constant:0.0]];
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:rating
+                                                             attribute:NSLayoutAttributeHeight
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:nil
+                                                             attribute:NSLayoutAttributeNotAnAttribute
+                                                            multiplier:1.0
+                                                              constant:CGRectGetHeight(self.bounds) - 4]]; //2 pixel padding on top/bottom
+            [self setNeedsLayout];
+            
+        }
+        
     }
     
-    if (primaryLabel){
-        primaryLabel.frame = CGRectOffset(primaryLabel.frame, 14, 0);
+    if (rating){
+        rating.rating = ratingValue;
     }
     
-    
-    
-    
-    
-    UIView *secondaryLabel;
-    
-    if ([self respondsToSelector:@selector(artistLabel)]){
-        secondaryLabel = [self artistLabel];
-    } else if ([self respondsToSelector:@selector(subtitleLabel)]){
-        secondaryLabel = [self subtitleLabel];
-    }
-    
-    if (secondaryLabel){
-        secondaryLabel.frame = CGRectOffset(secondaryLabel.frame, 14, 0);
-    }
-    
-    
-    
-    
-    
-    UIView *thirdaryLabel; //is thirdary a word?
-    
-    if ([self respondsToSelector:@selector(albumLabel)]){
-        thirdaryLabel = [self albumLabel];
-    } else if ([self respondsToSelector:@selector(detailLabel)]){
-        thirdaryLabel = [self detailLabel];
-    }
-    
-    if (thirdaryLabel){
-        thirdaryLabel.frame = CGRectOffset(thirdaryLabel.frame, 14, 0);
-    }
 }
 
 %end
 
-%hook _MusicSongListTableViewCellContentView
 
-- (void)layoutSubviews
+
+
+
+%hook MusicLibraryBrowseTableViewController
+
+- (void)tableView:(id)tableView willDisplayCell:(id)cell forRowAtIndexPath:(id)indexPath
 {
     %orig();
     
-    if ([self respondsToSelector:@selector(postLayoutSubviews)]){
-        [self postLayoutSubviews];
-    }
-}
-
-%end
-
-%hook MusicSongListTableViewCellContentView
-
-- (void)layoutSubviews
-{
-    %orig();
+    //the viewcontrollers are both descendents of the same class, as are the content views.
+    //but the cell classes are different, and the variable names are different, so we will try both.
     
-    if ([self respondsToSelector:@selector(postLayoutSubviews)]){
-        [self postLayoutSubviews];
-    }
-}
-
-%end
-
-
-
-
-
-%hook MPUTableViewController
-
-- (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3
-{
-    %orig(arg1, arg2, arg3);
+    id view = nil;
+    Ivar viewIvar = class_getInstanceVariable([cell class], [@"_tracklistItemView" UTF8String]);
     
-    int mediaItemIndex = [self dataSourceIndexForIndexPath:arg3];
-    id mediaItem;
-    
-    if (mediaItemIndex >= 0 && mediaItemIndex < [self.queryDataSource entities].count){
-        mediaItem = [[self.queryDataSource entities] objectAtIndex:mediaItemIndex];
-    }
-    
-    if (mediaItem && [mediaItem isKindOfClass:%c(MPConcreteMediaItem)]){ //only show for media items silly willy
-        
-        id musicCellContentView;
-        
-        if ([arg2 respondsToSelector:@selector(songCellContentView)]){ //iOS 7
-            musicCellContentView = [arg2 songCellContentView];
-        } else if ([arg2 respondsToSelector:@selector(_mediaCellContentView)]){ //iOS 8
-            musicCellContentView = [arg2 _mediaCellContentView];
-        }
-        
-        if (musicCellContentView && [musicCellContentView respondsToSelector:@selector(updateWithMediaItem:)]){
-            
-            [musicCellContentView performSelectorOnMainThread:@selector(updateWithMediaItem:) withObject:mediaItem waitUntilDone:NO];
-            
-            [musicCellContentView performSelectorOnMainThread:@selector(setTintColor:) withObject:self.view.window.tintColor waitUntilDone:NO];
-            [musicCellContentView layoutSubviews];
+    if (viewIvar != nil){
+        view = object_getIvar(cell, viewIvar);
+    } else {
+        viewIvar = class_getInstanceVariable([cell class], [@"_lockupView" UTF8String]);
+        if (viewIvar != nil){
+            view = object_getIvar(cell, viewIvar);
         }
     }
+    
+    if (view && [view respondsToSelector:@selector(iSeeStars_addRatingView)]){
+        [view performSelectorOnMainThread:@selector(iSeeStars_addRatingView) withObject:nil waitUntilDone:NO];
+    }
 }
 
 %end
+
+
+
+
 
 %ctor
 {

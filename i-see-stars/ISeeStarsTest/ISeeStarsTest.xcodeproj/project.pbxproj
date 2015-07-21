@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E28FEE51B5D85560061AE27 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E28FEE41B5D85560061AE27 /* MediaPlayer.framework */; };
 		2E9265251B52CAF800501112 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9265241B52CAF800501112 /* main.m */; };
 		2E9265281B52CAF800501112 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9265271B52CAF800501112 /* AppDelegate.m */; };
 		2E92652B1B52CAF800501112 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92652A1B52CAF800501112 /* ViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E28FEE41B5D85560061AE27 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2E92651F1B52CAF800501112 /* ISeeStarsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISeeStarsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9265231B52CAF800501112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E9265241B52CAF800501112 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E28FEE51B5D85560061AE27 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		2E9265161B52CAF800501112 = {
 			isa = PBXGroup;
 			children = (
+				2E28FEE41B5D85560061AE27 /* MediaPlayer.framework */,
 				2E9265211B52CAF800501112 /* ISeeStarsTest */,
 				2E9265201B52CAF800501112 /* Products */,
 			);

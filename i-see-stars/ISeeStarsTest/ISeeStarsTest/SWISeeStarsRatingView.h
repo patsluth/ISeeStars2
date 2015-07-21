@@ -14,6 +14,8 @@
 
 @interface SWISeeStarsRatingView : UIView
 
+- (id)initWithDotsImage:(UIImage *)dotsImage andStarsImage:(UIImage *)starsImage;
+
 @property (nonatomic) NSInteger rating;
 
 @end

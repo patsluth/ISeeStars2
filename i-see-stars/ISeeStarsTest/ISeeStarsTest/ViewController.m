@@ -9,11 +9,17 @@
 #import "ViewController.h"
 #import "SWISeeStarsRatingView.h"
 
+#import <MediaPlayer/MediaPlayer.h>
+
+#import <objc/runtime.h>
+
 
 
 
 
 @interface ViewController ()
+{
+}
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -42,7 +48,7 @@
     if (!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    
+    MPMediaItemPropertyAlbumTitle
     SWISeeStarsRatingView *rating;
     
     for (UIView *view in cell.subviews){
@@ -53,7 +59,9 @@
     }
     
     if (!rating){
-        rating = [[SWISeeStarsRatingView alloc] init];
+        rating = [[SWISeeStarsRatingView alloc] initWithDotsImage:[UIImage imageNamed:@"Dots"]
+                                                    andStarsImage:[UIImage imageNamed:@"Stars"]];
+        
         [cell addSubview:rating];
         
         [cell addConstraint:[NSLayoutConstraint constraintWithItem:rating
@@ -89,7 +97,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 @end

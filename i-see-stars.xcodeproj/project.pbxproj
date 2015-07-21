@@ -6,25 +6,209 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		2E28FD1F1B5D777E0061AE27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E28FB5E1B5D777E0061AE27 /* ISeeStarsTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E92651F1B52CAF800501112;
+			remoteInfo = ISeeStarsTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		2E9265101B52CA7A00501112 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = layout; path = "i-see-stars/layout"; sourceTree = "<group>"; };
-		2E9265111B52CA9600501112 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = "i-see-stars/public"; sourceTree = "<group>"; };
-		2E9265121B52CA9F00501112 /* ISeeStars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = ISeeStars.plist; path = "i-see-stars/ISeeStars.plist"; sourceTree = "<group>"; };
-		2E9265131B52CAA700501112 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = "i-see-stars/Makefile"; sourceTree = "<group>"; };
-		2E9265141B52CABE00501112 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = SWISeeStars.xm; path = "i-see-stars/SWISeeStars.xm"; sourceTree = "<group>"; };
-		2E9265151B52CABE00501112 /* SWISeeStarsPrefsBridge.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = SWISeeStarsPrefsBridge.xm; path = "i-see-stars/SWISeeStarsPrefsBridge.xm"; sourceTree = "<group>"; };
+		2E28F9871B5D777D0061AE27 /* com.patsluth.swiseestars_1.2-2_iphoneos-arm.deb */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "com.patsluth.swiseestars_1.2-2_iphoneos-arm.deb"; sourceTree = "<group>"; };
+		2E28F9881B5D777D0061AE27 /* com.patsluth.swiseestars_1.2-3_iphoneos-arm.deb */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "com.patsluth.swiseestars_1.2-3_iphoneos-arm.deb"; sourceTree = "<group>"; };
+		2E28F9891B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-1_iphoneos-arm.deb */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "com.patsluth.swiseestars_1.3-1_iphoneos-arm.deb"; sourceTree = "<group>"; };
+		2E28F98A1B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-2_iphoneos-arm.deb */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "com.patsluth.swiseestars_1.3-2_iphoneos-arm.deb"; sourceTree = "<group>"; };
+		2E28F98B1B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-3_iphoneos-arm.deb */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "com.patsluth.swiseestars_1.3-3_iphoneos-arm.deb"; sourceTree = "<group>"; };
+		2E28F98C1B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-4_iphoneos-arm.deb */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "com.patsluth.swiseestars_1.3-4_iphoneos-arm.deb"; sourceTree = "<group>"; };
+		2E28F98D1B5D777D0061AE27 /* ISeeStars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = ISeeStars.plist; sourceTree = "<group>"; };
+		2E28FB511B5D777E0061AE27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E28FB521B5D777E0061AE27 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E28FB541B5D777E0061AE27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2E28FB561B5D777E0061AE27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E28FB571B5D777E0061AE27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2E28FB581B5D777E0061AE27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E28FB591B5D777E0061AE27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E28FB5A1B5D777E0061AE27 /* SWISeeStarsRatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWISeeStarsRatingView.h; sourceTree = "<group>"; };
+		2E28FB5B1B5D777E0061AE27 /* SWISeeStarsRatingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWISeeStarsRatingView.m; sourceTree = "<group>"; };
+		2E28FB5C1B5D777E0061AE27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2E28FB5D1B5D777E0061AE27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E28FB5E1B5D777E0061AE27 /* ISeeStarsTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ISeeStarsTest.xcodeproj; sourceTree = "<group>"; };
+		2E28FB631B5D777E0061AE27 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
+		2E28FB641B5D777E0061AE27 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		2E28FB681B5D777E0061AE27 /* libSluthware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libSluthware.h; sourceTree = "<group>"; };
+		2E28FB691B5D777E0061AE27 /* NSTimer+SW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+SW.h"; sourceTree = "<group>"; };
+		2E28FB6A1B5D777E0061AE27 /* SWMCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMCircle.h; sourceTree = "<group>"; };
+		2E28FB6B1B5D777E0061AE27 /* SWMLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMLine.h; sourceTree = "<group>"; };
+		2E28FB6C1B5D777E0061AE27 /* SWMQuadratic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWMQuadratic.h; sourceTree = "<group>"; };
+		2E28FB6D1B5D777E0061AE27 /* TBAlertAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAlertAction.h; sourceTree = "<group>"; };
+		2E28FB6E1B5D777E0061AE27 /* TBAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAlertController.h; sourceTree = "<group>"; };
+		2E28FB6F1B5D777E0061AE27 /* UIColor+SW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SW.h"; sourceTree = "<group>"; };
+		2E28FB701B5D777E0061AE27 /* UIScrollView+SW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SW.h"; sourceTree = "<group>"; };
+		2E28FB711B5D777E0061AE27 /* UISnapBehaviorHorizontal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISnapBehaviorHorizontal.h; sourceTree = "<group>"; };
+		2E28FB721B5D777E0061AE27 /* libsw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libsw.h; sourceTree = "<group>"; };
+		2E28FB731B5D777E0061AE27 /* SWAppLauncher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAppLauncher.h; sourceTree = "<group>"; };
+		2E28FB741B5D777E0061AE27 /* SWPSListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPSListController.h; sourceTree = "<group>"; };
+		2E28FB751B5D777E0061AE27 /* SWPSListControllerHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPSListControllerHeaderView.h; sourceTree = "<group>"; };
+		2E28FB761B5D777E0061AE27 /* SWPSTwitterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPSTwitterCell.h; sourceTree = "<group>"; };
+		2E28FB771B5D777E0061AE27 /* SWSuperiorWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSuperiorWindow.h; sourceTree = "<group>"; };
+		2E28FB781B5D777E0061AE27 /* SWISeeStarsPrefsBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWISeeStarsPrefsBridge.h; sourceTree = "<group>"; };
+		2E28FB7C1B5D777E0061AE27 /* Dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dots.png; sourceTree = "<group>"; };
+		2E28FB7D1B5D777E0061AE27 /* Dots@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dots@2x.png"; sourceTree = "<group>"; };
+		2E28FB7E1B5D777E0061AE27 /* Dots@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dots@3x.png"; sourceTree = "<group>"; };
+		2E28FB7F1B5D777E0061AE27 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2E28FB801B5D777E0061AE27 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		2E28FB811B5D777E0061AE27 /* Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@3x.png"; sourceTree = "<group>"; };
+		2E28FB821B5D777E0061AE27 /* Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stars.png; sourceTree = "<group>"; };
+		2E28FB831B5D777E0061AE27 /* Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stars@2x.png"; sourceTree = "<group>"; };
+		2E28FB841B5D777E0061AE27 /* Stars@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stars@3x.png"; sourceTree = "<group>"; };
+		2E28FB851B5D777E0061AE27 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISeeStars.xm; sourceTree = "<group>"; };
+		2E28FB861B5D777E0061AE27 /* SWISeeStarsPrefsBridge.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISeeStarsPrefsBridge.xm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		2E28F9851B5D777D0061AE27 /* i-see-stars */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB611B5D777E0061AE27 /* layout */,
+				2E28FB651B5D777E0061AE27 /* public */,
+				2E28F9861B5D777D0061AE27 /* final_release_debs */,
+				2E28FB641B5D777E0061AE27 /* Makefile */,
+				2E28F98D1B5D777D0061AE27 /* ISeeStars.plist */,
+				2E28FB851B5D777E0061AE27 /* SWISeeStars.xm */,
+				2E28FB861B5D777E0061AE27 /* SWISeeStarsPrefsBridge.xm */,
+				2E28FB4F1B5D777E0061AE27 /* ISeeStarsTest */,
+				2E28FB7B1B5D777E0061AE27 /* Resources */,
+			);
+			path = "i-see-stars";
+			sourceTree = "<group>";
+		};
+		2E28F9861B5D777D0061AE27 /* final_release_debs */ = {
+			isa = PBXGroup;
+			children = (
+				2E28F9871B5D777D0061AE27 /* com.patsluth.swiseestars_1.2-2_iphoneos-arm.deb */,
+				2E28F9881B5D777D0061AE27 /* com.patsluth.swiseestars_1.2-3_iphoneos-arm.deb */,
+				2E28F9891B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-1_iphoneos-arm.deb */,
+				2E28F98A1B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-2_iphoneos-arm.deb */,
+				2E28F98B1B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-3_iphoneos-arm.deb */,
+				2E28F98C1B5D777D0061AE27 /* com.patsluth.swiseestars_1.3-4_iphoneos-arm.deb */,
+			);
+			path = final_release_debs;
+			sourceTree = "<group>";
+		};
+		2E28FB4F1B5D777E0061AE27 /* ISeeStarsTest */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB501B5D777E0061AE27 /* ISeeStarsTest */,
+				2E28FB5E1B5D777E0061AE27 /* ISeeStarsTest.xcodeproj */,
+			);
+			path = ISeeStarsTest;
+			sourceTree = "<group>";
+		};
+		2E28FB501B5D777E0061AE27 /* ISeeStarsTest */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB511B5D777E0061AE27 /* AppDelegate.h */,
+				2E28FB521B5D777E0061AE27 /* AppDelegate.m */,
+				2E28FB531B5D777E0061AE27 /* LaunchScreen.xib */,
+				2E28FB551B5D777E0061AE27 /* Main.storyboard */,
+				2E28FB571B5D777E0061AE27 /* Images.xcassets */,
+				2E28FB581B5D777E0061AE27 /* Info.plist */,
+				2E28FB591B5D777E0061AE27 /* main.m */,
+				2E28FB5A1B5D777E0061AE27 /* SWISeeStarsRatingView.h */,
+				2E28FB5B1B5D777E0061AE27 /* SWISeeStarsRatingView.m */,
+				2E28FB5C1B5D777E0061AE27 /* ViewController.h */,
+				2E28FB5D1B5D777E0061AE27 /* ViewController.m */,
+			);
+			path = ISeeStarsTest;
+			sourceTree = "<group>";
+		};
+		2E28FB5F1B5D777E0061AE27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FD201B5D777E0061AE27 /* ISeeStarsTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E28FB611B5D777E0061AE27 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB621B5D777E0061AE27 /* DEBIAN */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		2E28FB621B5D777E0061AE27 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB631B5D777E0061AE27 /* control */,
+			);
+			path = DEBIAN;
+			sourceTree = "<group>";
+		};
+		2E28FB651B5D777E0061AE27 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB661B5D777E0061AE27 /* libsw */,
+				2E28FB781B5D777E0061AE27 /* SWISeeStarsPrefsBridge.h */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		2E28FB661B5D777E0061AE27 /* libsw */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB671B5D777E0061AE27 /* libSluthware */,
+				2E28FB721B5D777E0061AE27 /* libsw.h */,
+				2E28FB731B5D777E0061AE27 /* SWAppLauncher.h */,
+				2E28FB741B5D777E0061AE27 /* SWPSListController.h */,
+				2E28FB751B5D777E0061AE27 /* SWPSListControllerHeaderView.h */,
+				2E28FB761B5D777E0061AE27 /* SWPSTwitterCell.h */,
+				2E28FB771B5D777E0061AE27 /* SWSuperiorWindow.h */,
+			);
+			path = libsw;
+			sourceTree = "<group>";
+		};
+		2E28FB671B5D777E0061AE27 /* libSluthware */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB681B5D777E0061AE27 /* libSluthware.h */,
+				2E28FB691B5D777E0061AE27 /* NSTimer+SW.h */,
+				2E28FB6A1B5D777E0061AE27 /* SWMCircle.h */,
+				2E28FB6B1B5D777E0061AE27 /* SWMLine.h */,
+				2E28FB6C1B5D777E0061AE27 /* SWMQuadratic.h */,
+				2E28FB6D1B5D777E0061AE27 /* TBAlertAction.h */,
+				2E28FB6E1B5D777E0061AE27 /* TBAlertController.h */,
+				2E28FB6F1B5D777E0061AE27 /* UIColor+SW.h */,
+				2E28FB701B5D777E0061AE27 /* UIScrollView+SW.h */,
+				2E28FB711B5D777E0061AE27 /* UISnapBehaviorHorizontal.h */,
+			);
+			path = libSluthware;
+			sourceTree = "<group>";
+		};
+		2E28FB7B1B5D777E0061AE27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E28FB7C1B5D777E0061AE27 /* Dots.png */,
+				2E28FB7D1B5D777E0061AE27 /* Dots@2x.png */,
+				2E28FB7E1B5D777E0061AE27 /* Dots@3x.png */,
+				2E28FB7F1B5D777E0061AE27 /* Icon.png */,
+				2E28FB801B5D777E0061AE27 /* Icon@2x.png */,
+				2E28FB811B5D777E0061AE27 /* Icon@3x.png */,
+				2E28FB821B5D777E0061AE27 /* Stars.png */,
+				2E28FB831B5D777E0061AE27 /* Stars@2x.png */,
+				2E28FB841B5D777E0061AE27 /* Stars@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2EC6EADC1A33EAEB004B5249 = {
 			isa = PBXGroup;
 			children = (
-				2E9265101B52CA7A00501112 /* layout */,
-				2E9265111B52CA9600501112 /* public */,
-				2E9265121B52CA9F00501112 /* ISeeStars.plist */,
-				2E9265131B52CAA700501112 /* Makefile */,
-				2E9265141B52CABE00501112 /* SWISeeStars.xm */,
-				2E9265151B52CABE00501112 /* SWISeeStarsPrefsBridge.xm */,
+				2E28F9851B5D777D0061AE27 /* i-see-stars */,
 			);
 			sourceTree = "<group>";
 		};
@@ -42,14 +226,50 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2EC6EADC1A33EAEB004B5249;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2E28FB5F1B5D777E0061AE27 /* Products */;
+					ProjectRef = 2E28FB5E1B5D777E0061AE27 /* ISeeStarsTest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2E28FD201B5D777E0061AE27 /* ISeeStarsTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ISeeStarsTest.app;
+			remoteRef = 2E28FD1F1B5D777E0061AE27 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXVariantGroup section */
+		2E28FB531B5D777E0061AE27 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E28FB541B5D777E0061AE27 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		2E28FB551B5D777E0061AE27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E28FB561B5D777E0061AE27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2EC6EAE11A33EAEB004B5249 /* Debug */ = {

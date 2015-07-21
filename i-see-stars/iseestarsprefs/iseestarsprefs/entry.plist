@@ -1,6 +1,6 @@
 {
 	entry = {
-		bundle = ISeeStarsPrefs;
+		bundle = ISeeStarsPrefs2;
 		cell = PSLinkCell;
 		detail = "SWISeeStarsPrefsListController";
 		icon = "Icon.png";

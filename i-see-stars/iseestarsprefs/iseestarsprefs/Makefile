@@ -4,19 +4,19 @@
 
 
 ARCHS = armv7 armv7s arm64
-TARGET = iphone:clang:latest:7.0
+TARGET = iphone:clang:latest
 
 
 
 
 
-BUNDLE_NAME = ISeeStarsPrefs
-ISeeStarsPrefs_CFLAGS = -fobjc-arc
-ISeeStarsPrefs_FILES = SWISeeStarsPrefsListController.mm
-ISeeStarsPrefs_INSTALL_PATH = /Library/PreferenceBundles
-ISeeStarsPrefs_FRAMEWORKS = UIKit
-ISeeStarsPrefs_PRIVATE_FRAMEWORKS = Preferences
-ISeeStarsPrefs_LIBRARIES = sw
+BUNDLE_NAME = ISeeStarsPrefs2
+ISeeStarsPrefs2_CFLAGS = -fobjc-arc
+ISeeStarsPrefs2_FILES = SWISeeStarsPrefsListController.mm
+ISeeStarsPrefs2_INSTALL_PATH = /Library/PreferenceBundles
+ISeeStarsPrefs2_FRAMEWORKS = UIKit
+ISeeStarsPrefs2_PRIVATE_FRAMEWORKS = Preferences
+ISeeStarsPrefs2_LIBRARIES = sw
 
 ADDITIONAL_CFLAGS = -Ipublic
 ADDITIONAL_CFLAGS += -Ipublic/libsw
@@ -42,7 +42,7 @@ clean::
 
 internal-stage::
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)
-	$(ECHO_NOTHING)cp entry.plist $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences/ISeeStars.plist$(ECHO_END)
+	$(ECHO_NOTHING)cp entry.plist $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences/ISeeStars2.plist$(ECHO_END)
 
 
 
