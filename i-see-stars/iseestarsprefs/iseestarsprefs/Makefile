@@ -12,7 +12,7 @@ TARGET = iphone:clang:latest
 
 BUNDLE_NAME = ISeeStarsPrefs2
 ISeeStarsPrefs2_CFLAGS = -fobjc-arc
-ISeeStarsPrefs2_FILES = SWISeeStarsPrefsListController.mm
+ISeeStarsPrefs2_FILES = SWISeeStarsPSListController.mm
 ISeeStarsPrefs2_INSTALL_PATH = /Library/PreferenceBundles
 ISeeStarsPrefs2_FRAMEWORKS = UIKit
 ISeeStarsPrefs2_PRIVATE_FRAMEWORKS = Preferences

@@ -1,8 +1,7 @@
 
-#import "SWISeeStarsPrefsBridge.h"
 #import "SWISeeStarsRatingView.h"
 
-#import <libSluthware.h>
+#import "libsw/libSluthware/libSluthware.h"
 
 #import <MediaPlayer/MediaPlayer.h>
 

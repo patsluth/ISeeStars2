@@ -2,7 +2,7 @@
 	entry = {
 		bundle = ISeeStarsPrefs2;
 		cell = PSLinkCell;
-		detail = "SWISeeStarsPrefsListController";
+		detail = "SWISeeStarsPSListController";
 		icon = "Icon.png";
 		isController = 1;
 		label = "I See Stars";

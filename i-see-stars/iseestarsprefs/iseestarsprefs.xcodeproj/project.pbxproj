@@ -25,21 +25,21 @@
 		2E28FD341B5D77D60061AE27 /* SWPSListControllerHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPSListControllerHeaderView.h; sourceTree = "<group>"; };
 		2E28FD351B5D77D60061AE27 /* SWPSTwitterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWPSTwitterCell.h; sourceTree = "<group>"; };
 		2E28FD361B5D77D60061AE27 /* SWSuperiorWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWSuperiorWindow.h; sourceTree = "<group>"; };
-		2E28FD371B5D77D60061AE27 /* SWISeeStarsPrefsListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWISeeStarsPrefsListController.h; sourceTree = "<group>"; };
+		2E28FD371B5D77D60061AE27 /* SWISeeStarsPSListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWISeeStarsPSListController.h; sourceTree = "<group>"; };
 		2E28FD391B5D77D60061AE27 /* Designer_Twitter_Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Designer_Twitter_Profile.png; sourceTree = "<group>"; };
 		2E28FD3A1B5D77D60061AE27 /* Developer_Twitter_Profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Developer_Twitter_Profile.jpeg; sourceTree = "<group>"; };
 		2E28FD3B1B5D77D60061AE27 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2E28FD3C1B5D77D60061AE27 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2E28FD3D1B5D77D60061AE27 /* Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@3x.png"; sourceTree = "<group>"; };
 		2E28FD3E1B5D77D60061AE27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E28FD3F1B5D77D60061AE27 /* ISeeStarsPrefs2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ISeeStarsPrefs2.plist; sourceTree = "<group>"; };
+		2E28FD3F1B5D77D60061AE27 /* SWISeeStarsPSListController.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SWISeeStarsPSListController.plist; sourceTree = "<group>"; };
 		2E28FD411B5D77D60061AE27 /* Prefs_Banner_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prefs_Banner_Background.png; sourceTree = "<group>"; };
 		2E28FD421B5D77D60061AE27 /* Prefs_Banner_Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Prefs_Banner_Background@2x.png"; sourceTree = "<group>"; };
 		2E28FD431B5D77D60061AE27 /* Prefs_Banner_Background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Prefs_Banner_Background@3x.png"; sourceTree = "<group>"; };
 		2E28FD441B5D77D60061AE27 /* Prefs_Banner_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prefs_Banner_Icon.png; sourceTree = "<group>"; };
 		2E28FD451B5D77D60061AE27 /* Prefs_Banner_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Prefs_Banner_Icon@2x.png"; sourceTree = "<group>"; };
 		2E28FD461B5D77D60061AE27 /* Prefs_Banner_Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Prefs_Banner_Icon@3x.png"; sourceTree = "<group>"; };
-		2E28FD471B5D77D60061AE27 /* SWISeeStarsPrefsListController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SWISeeStarsPrefsListController.mm; sourceTree = "<group>"; };
+		2E28FD471B5D77D60061AE27 /* SWISeeStarsPSListController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SWISeeStarsPSListController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -49,7 +49,7 @@
 				2E28FD241B5D77D60061AE27 /* public */,
 				2E28FD231B5D77D60061AE27 /* Makefile */,
 				2E28FD221B5D77D60061AE27 /* entry.plist */,
-				2E28FD471B5D77D60061AE27 /* SWISeeStarsPrefsListController.mm */,
+				2E28FD471B5D77D60061AE27 /* SWISeeStarsPSListController.mm */,
 				2E28FD381B5D77D60061AE27 /* Resources */,
 			);
 			path = iseestarsprefs;
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				2E28FD251B5D77D60061AE27 /* libsw */,
-				2E28FD371B5D77D60061AE27 /* SWISeeStarsPrefsListController.h */,
+				2E28FD371B5D77D60061AE27 /* SWISeeStarsPSListController.h */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 				2E28FD3C1B5D77D60061AE27 /* Icon@2x.png */,
 				2E28FD3D1B5D77D60061AE27 /* Icon@3x.png */,
 				2E28FD3E1B5D77D60061AE27 /* Info.plist */,
-				2E28FD3F1B5D77D60061AE27 /* ISeeStarsPrefs2.plist */,
+				2E28FD3F1B5D77D60061AE27 /* SWISeeStarsPSListController.plist */,
 				2E28FD411B5D77D60061AE27 /* Prefs_Banner_Background.png */,
 				2E28FD421B5D77D60061AE27 /* Prefs_Banner_Background@2x.png */,
 				2E28FD431B5D77D60061AE27 /* Prefs_Banner_Background@3x.png */,

@@ -4,7 +4,7 @@
 
 
 THEOS_PACKAGE_DIR_NAME = debs
-PACKAGE_VERSION = 1.0-1
+PACKAGE_VERSION = 1.0-2
 
 
 
@@ -13,7 +13,7 @@ PACKAGE_VERSION = 1.0-1
 #USEWIFI = 1 ###COMMENT OUT TO USE USB
 
 ifdef USEWIFI
-    THEOS_DEVICE_IP = 192.168.1.149
+    THEOS_DEVICE_IP = 192.168.1.113
     THEOS_DEVICE_PORT = 22
 else
     THEOS_DEVICE_IP = 127.0.0.1
@@ -77,7 +77,7 @@ clean::
 
 
 after-install::
-	@install.exec "killall -9 SpringBoard"
+	install.exec "killall -9 backboardd"
 
 
 
