@@ -4,7 +4,7 @@
 
 
 THEOS_PACKAGE_DIR_NAME = debs
-PACKAGE_VERSION = 1.0-2
+PACKAGE_VERSION = 1.0-3
 
 
 
@@ -31,11 +31,11 @@ TARGET = iphone:clang:latest
 
 
 
-TWEAK_NAME = ISeeStars
-ISeeStars_CFLAGS = -fobjc-arc
-ISeeStars_FILES = SWISeeStars.xm ISeeStarsTest/ISeeStarsTest/SWISeeStarsRatingView.m
-ISeeStars_FRAMEWORKS = Foundation UIKit MediaPlayer CoreGraphics
-ISeeStars_LIBRARIES = sw packageinfo
+TWEAK_NAME = ISeeStars2
+ISeeStars2_CFLAGS = -fobjc-arc
+ISeeStars2_FILES = SWISeeStars.xm ISeeStarsTest/ISeeStarsTest/SWISeeStarsRatingView.m
+ISeeStars2_FRAMEWORKS = Foundation UIKit MediaPlayer CoreGraphics
+ISeeStars2_LIBRARIES = sw packageinfo
 
 ADDITIONAL_CFLAGS = -Ipublic
 ADDITIONAL_CFLAGS += -IISeeStarsTest/ISeeStarsTest/

@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		2E3BD9261BD47A0800B11FFD /* ISeeStars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = ISeeStars.plist; path = "i-see-stars/ISeeStars.plist"; sourceTree = "<group>"; };
 		2E3BD9271BD47A0800B11FFD /* ISeeStarsTest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ISeeStarsTest; path = "i-see-stars/ISeeStarsTest"; sourceTree = "<group>"; };
 		2E3BD9281BD47A0800B11FFD /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = layout; path = "i-see-stars/layout"; sourceTree = "<group>"; };
-		2E3BD9291BD47A0800B11FFD /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = "i-see-stars/Makefile"; sourceTree = "<group>"; };
+		2E3BD9291BD47A0800B11FFD /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; name = Makefile; path = "i-see-stars/Makefile"; sourceTree = "<group>"; };
 		2E3BD92A1BD47A0800B11FFD /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; name = public; path = "i-see-stars/public"; sourceTree = "<group>"; };
 		2E3BD92B1BD47A0800B11FFD /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; path = "i-see-stars/Resources"; sourceTree = "<group>"; };
 		2E3BD92C1BD47A0800B11FFD /* SWISeeStars.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = SWISeeStars.xm; path = "i-see-stars/SWISeeStars.xm"; sourceTree = "<group>"; };
@@ -20,7 +19,6 @@
 		2EC6EADC1A33EAEB004B5249 = {
 			isa = PBXGroup;
 			children = (
-				2E3BD9261BD47A0800B11FFD /* ISeeStars.plist */,
 				2E3BD9271BD47A0800B11FFD /* ISeeStarsTest */,
 				2E3BD9281BD47A0800B11FFD /* layout */,
 				2E3BD9291BD47A0800B11FFD /* Makefile */,
