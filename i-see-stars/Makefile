@@ -3,22 +3,7 @@
 
 
 
-THEOS_PACKAGE_DIR_NAME = debs
-PACKAGE_VERSION = 1.0-3
-
-
-
-
-
-#USEWIFI = 1 ###COMMENT OUT TO USE USB
-
-ifdef USEWIFI
-    THEOS_DEVICE_IP = 192.168.1.113
-    THEOS_DEVICE_PORT = 22
-else
-    THEOS_DEVICE_IP = 127.0.0.1
-    THEOS_DEVICE_PORT = 2222
-endif
+PACKAGE_VERSION = 1.0-4
 
 
 
@@ -32,7 +17,8 @@ TARGET = iphone:clang:latest
 
 
 TWEAK_NAME = ISeeStars2
-ISeeStars2_CFLAGS = -fobjc-arc
+ISeeStars2_CFLAGS += -fobjc-arc
+#ISeeStars2_LDFLAGS += -Wl,-segalign,4000
 ISeeStars2_FILES = SWISeeStars.xm ISeeStarsTest/ISeeStarsTest/SWISeeStarsRatingView.m
 ISeeStars2_FRAMEWORKS = Foundation UIKit MediaPlayer CoreGraphics
 ISeeStars2_LIBRARIES = sw packageinfo
