@@ -3,6 +3,7 @@
 
 
 
+FINALPACKAGE = 1
 PACKAGE_VERSION = 1.0-4
 
 
@@ -18,7 +19,6 @@ TARGET = iphone:clang:latest
 
 TWEAK_NAME = ISeeStars2
 ISeeStars2_CFLAGS += -fobjc-arc
-#ISeeStars2_LDFLAGS += -Wl,-segalign,4000
 ISeeStars2_FILES = SWISeeStars.xm ISeeStarsTest/ISeeStarsTest/SWISeeStarsRatingView.m
 ISeeStars2_FRAMEWORKS = Foundation UIKit MediaPlayer CoreGraphics
 ISeeStars2_LIBRARIES = sw packageinfo
