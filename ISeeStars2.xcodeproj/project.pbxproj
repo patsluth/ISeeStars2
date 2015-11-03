@@ -1,0 +1,92 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		2EA989251BE937A300A79AC9 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		2EA989261BE937A300A79AC9 /* final_release_debs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = final_release_debs; sourceTree = "<group>"; };
+		2EA989271BE937A300A79AC9 /* ISeeStarsPrefs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ISeeStarsPrefs; sourceTree = "<group>"; };
+		2EA989281BE937A300A79AC9 /* ISeeStarsTest */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ISeeStarsTest; sourceTree = "<group>"; };
+		2EA989291BE937A300A79AC9 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
+		2EA9892A1BE937A300A79AC9 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
+		2EA9892B1BE937A300A79AC9 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		2EA9892F1BE937A300A79AC9 /* ISeeStars2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ISeeStars2.plist; sourceTree = "<group>"; };
+		2EA989301BE937A300A79AC9 /* SWISeeStarsRatingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWISeeStarsRatingView.m; sourceTree = "<group>"; };
+		2EA989311BE937A300A79AC9 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		2EA989321BE937A300A79AC9 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISeeStars.xm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2EA989161BE936C200A79AC9 = {
+			isa = PBXGroup;
+			children = (
+				2EA989251BE937A300A79AC9 /* Assets */,
+				2EA989261BE937A300A79AC9 /* final_release_debs */,
+				2EA989271BE937A300A79AC9 /* ISeeStarsPrefs */,
+				2EA989281BE937A300A79AC9 /* ISeeStarsTest */,
+				2EA989291BE937A300A79AC9 /* layout */,
+				2EA989311BE937A300A79AC9 /* Makefile */,
+				2EA9892A1BE937A300A79AC9 /* public */,
+				2EA9892B1BE937A300A79AC9 /* Resources */,
+				2EA989301BE937A300A79AC9 /* SWISeeStarsRatingView.m */,
+				2EA9892F1BE937A300A79AC9 /* ISeeStars2.plist */,
+				2EA989321BE937A300A79AC9 /* SWISeeStars.xm */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		2EA989171BE936C200A79AC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+			};
+			buildConfigurationList = 2EA9891A1BE936C200A79AC9 /* Build configuration list for PBXProject "ISeeStars2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2EA989161BE936C200A79AC9;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		2EA9891B1BE936C200A79AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2EA9891C1BE936C200A79AC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EA9891A1BE936C200A79AC9 /* Build configuration list for PBXProject "ISeeStars2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EA9891B1BE936C200A79AC9 /* Debug */,
+				2EA9891C1BE936C200A79AC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EA989171BE936C200A79AC9 /* Project object */;
+}
