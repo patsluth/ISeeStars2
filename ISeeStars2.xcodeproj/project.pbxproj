@@ -8,7 +8,6 @@
 
 /* Begin PBXFileReference section */
 		2EA989251BE937A300A79AC9 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		2EA989261BE937A300A79AC9 /* final_release_debs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = final_release_debs; sourceTree = "<group>"; };
 		2EA989271BE937A300A79AC9 /* ISeeStarsPrefs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ISeeStarsPrefs; sourceTree = "<group>"; };
 		2EA989281BE937A300A79AC9 /* ISeeStarsTest */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ISeeStarsTest; sourceTree = "<group>"; };
 		2EA989291BE937A300A79AC9 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
@@ -17,7 +16,7 @@
 		2EA9892F1BE937A300A79AC9 /* ISeeStars2.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ISeeStars2.plist; sourceTree = "<group>"; };
 		2EA989301BE937A300A79AC9 /* SWISeeStarsRatingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWISeeStarsRatingView.m; sourceTree = "<group>"; };
 		2EA989311BE937A300A79AC9 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		2EA989321BE937A300A79AC9 /* SWISeeStars.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = SWISeeStars.xm; sourceTree = "<group>"; };
+		2EA989321BE937A300A79AC9 /* SWISeeStars.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = SWISeeStars.xm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -25,7 +24,6 @@
 			isa = PBXGroup;
 			children = (
 				2EA989251BE937A300A79AC9 /* Assets */,
-				2EA989261BE937A300A79AC9 /* final_release_debs */,
 				2EA989271BE937A300A79AC9 /* ISeeStarsPrefs */,
 				2EA989281BE937A300A79AC9 /* ISeeStarsTest */,
 				2EA989291BE937A300A79AC9 /* layout */,

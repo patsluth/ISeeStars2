@@ -44,10 +44,9 @@
     
     id entityProvider = self.entityValueProvider.baseEntityValueProvider;
     
-    if (entityProvider && [[entityProvider class] isSubclassOfClass:[MPMediaEntity class]]){
+    if (entityProvider && [[entityProvider class] isSubclassOfClass:[MPMediaEntity class]]){ // media cell
         
-        MPMediaEntity *mediaItem = (MPMediaEntity *)entityProvider;
-        NSNumber *itemRating = [mediaItem valueForProperty:MPMediaItemPropertyRating];
+        NSNumber *itemRating = [entityProvider valueForProperty:MPMediaItemPropertyRating];
         
         if (!itemRating){
             if (rating){ [rating removeFromSuperview]; }
@@ -56,7 +55,7 @@
         
         ratingValue = [itemRating integerValue];
         
-    } else { //if the cell doesnt have a media item, it isnt a media cell
+    } else { // not a media cell
         if (rating){ [rating removeFromSuperview]; }
         return;
     }
