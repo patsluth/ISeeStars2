@@ -45,20 +45,20 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    if (!cell){
+    if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
     SWISeeStarsRatingView *rating;
     
-    for (UIView *view in cell.subviews){
-        if ([view isKindOfClass:[SWISeeStarsRatingView class]]){
+    for (UIView *view in cell.subviews) {
+        if ([view isKindOfClass:[SWISeeStarsRatingView class]]) {
             rating = (SWISeeStarsRatingView *)view;
             break;
         }
     }
     
-    if (!rating){
+    if (!rating) {
         rating = [[SWISeeStarsRatingView alloc] initWithDotsImage:[UIImage imageNamed:@"Dots"]
                                                     andStarsImage:[UIImage imageNamed:@"Stars"]];
         

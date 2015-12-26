@@ -14,7 +14,7 @@
 		2E92652B1B52CAF800501112 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92652A1B52CAF800501112 /* ViewController.m */; };
 		2E92652E1B52CAF800501112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E92652C1B52CAF800501112 /* Main.storyboard */; };
 		2E9265331B52CAF800501112 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9265311B52CAF800501112 /* LaunchScreen.xib */; };
-		2EC9569B1B52E0280056317F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC9569A1B52E0280056317F /* Images.xcassets */; };
+		2EB41E191C2BAB2600276D05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB41E181C2BAB2600276D05 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		2E92652A1B52CAF800501112 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2E92652D1B52CAF800501112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E9265321B52CAF800501112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2EC9569A1B52E0280056317F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2EB41E181C2BAB2600276D05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 				2E92652A1B52CAF800501112 /* ViewController.m */,
 				2E92652C1B52CAF800501112 /* Main.storyboard */,
 				2E9265311B52CAF800501112 /* LaunchScreen.xib */,
-				2EC9569A1B52E0280056317F /* Images.xcassets */,
+				2EB41E181C2BAB2600276D05 /* Images.xcassets */,
 				2E9265221B52CAF800501112 /* Supporting Files */,
 			);
 			path = ISeeStarsTest;
@@ -154,7 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC9569B1B52E0280056317F /* Images.xcassets in Resources */,
+				2EB41E191C2BAB2600276D05 /* Images.xcassets in Resources */,
 				2E92652E1B52CAF800501112 /* Main.storyboard in Resources */,
 				2E9265331B52CAF800501112 /* LaunchScreen.xib in Resources */,
 			);

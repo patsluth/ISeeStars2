@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Dot.png"
+      "filename" : "Dot.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "Dot@2x.png"
+      "filename" : "Dot-1.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "Dot@3x.png"
+      "filename" : "Dot-2.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

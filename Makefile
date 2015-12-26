@@ -4,7 +4,7 @@
 
 
 FINALPACKAGE = 1
-PACKAGE_VERSION = 1.0-4
+PACKAGE_VERSION = 1.0-5
 
 
 
@@ -20,7 +20,7 @@ TARGET = iphone:clang:latest
 TWEAK_NAME = ISeeStars2
 ISeeStars2_CFLAGS += -fobjc-arc
 ISeeStars2_FILES = SWISeeStars.xm SWISeeStarsRatingView.m
-ISeeStars2_FRAMEWORKS = Foundation UIKit MediaPlayer CoreGraphics
+ISeeStars2_FRAMEWORKS = Foundation UIKit CoreGraphics
 ISeeStars2_LIBRARIES = sw packageinfo
 
 ADDITIONAL_CFLAGS = -Ipublic
@@ -53,7 +53,7 @@ include theos/makefiles/swcommon.mk
 
 
 after-install::
-	install.exec "killall -9 backboardd"
+	$(ECHO_NOTHING)install.exec "killall -9 Music > /dev/null 2> /dev/null"; echo -n '';$(ECHO_END)
 
 
 

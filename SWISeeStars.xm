@@ -1,9 +1,8 @@
 
 #import "SWISeeStarsRatingView.h"
-
 #import "libsw/libSluthware/libSluthware.h"
 
-#import <MediaPlayer/MediaPlayer.h>
+#import "MusicCoalescingEntityValueProvider.h"
 
 #import <objc/runtime.h>
 
@@ -11,22 +10,11 @@
 
 
 
-@interface MusicEntityValueProviding : NSObject
-{
-}
-
-//<MusicEntityValueProviding> MPConcreteMediaItem ?????
-//Double check class at runtime
-- (id)baseEntityValueProvider;
-
-@end
-
-
 @interface MusicEntityAbstractLockupView : UIView
 {
 }
 
-@property (nonatomic, retain) MusicEntityValueProviding *entityValueProvider;
+@property (nonatomic, retain) MusicCoalescingEntityValueProvider *entityValueProvider;
 
 @end
 
@@ -39,38 +27,66 @@
 %new
 - (void)iSeeStars_addRatingView
 {
+    
+    
+//    if (!bundle) {
+//        return;
+//    }
+//    
+//    UIImageView *expl = MSHookIvar<UIImageView *>(self, "_explicitBadgeImageView");
+//    expl.contentMode = UIViewContentModeScaleAspectFit;
+//    CGRect originFrame = expl.frame;
+//    NSLog(@"Cello %@", expl);
+//    UIImage *explicitHeart = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"Heart_Explicit" ofType:@"png"]];
+//    explicitHeart = [explicitHeart imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//    expl.image = explicitHeart;
+//    expl.frame = originFrame;
+//    
+//    
+////    if ([arg1 isEqualToString:@"isExplicit"]) {
+////        if (%orig(@"likedState")) {
+////            return @(YES);
+////        }
+////    }
+//    
+//    
+//    
+//    
     SWISeeStarsRatingView *rating = (SWISeeStarsRatingView *)[self viewWithTag:696969];
-    NSInteger ratingValue = 0;
+    NSNumber *itemRating;
+    NSNumber *itemLikedState; // heart
+    
+    
     
     id entityProvider = self.entityValueProvider.baseEntityValueProvider;
     
-    if (entityProvider && [[entityProvider class] isSubclassOfClass:[MPMediaEntity class]]){ // media cell
+    if (entityProvider && [[entityProvider class] isSubclassOfClass:%c(MPConcreteMediaItem)]) { // media cell
         
-        NSNumber *itemRating = [entityProvider valueForProperty:MPMediaItemPropertyRating];
-        
-        if (!itemRating){
-            if (rating){ [rating removeFromSuperview]; }
-            return;
-        }
-        
-        ratingValue = [itemRating integerValue];
+        itemRating = [self.entityValueProvider valueForEntityProperty:@"rating"];
+        itemLikedState = [self.entityValueProvider valueForEntityProperty:@"likedState"];
         
     } else { // not a media cell
-        if (rating){ [rating removeFromSuperview]; }
+        if (rating) {
+            [rating removeFromSuperview];
+        }
         return;
     }
     
-    if (!rating){
+    
+    
+    if (!rating) {
         
         NSBundle *bundle = [NSBundle bundleWithPath:@"/Library/Application Support/ISeeStarsSupport.bundle"];
         
-        if (bundle){
+        if (bundle) {
             
             UIImage *dots = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"Dots" ofType:@"png"]];
             UIImage *stars = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"Stars" ofType:@"png"]];
+            UIImage *hearts = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"Hearts" ofType:@"png"]];
             
             rating = [[SWISeeStarsRatingView alloc] initWithDotsImage:dots
-                                                        andStarsImage:stars];
+                                                        andStarsImage:stars
+                                                        andHeartsImage:hearts];
             [self addSubview:rating];
             
             [self addConstraint:[NSLayoutConstraint constraintWithItem:rating
@@ -107,8 +123,9 @@
         
     }
     
-    if (rating){
-        rating.rating = ratingValue;
+    if (rating) {
+        rating.rating = [itemRating integerValue];
+        rating.likedStatus = [itemLikedState integerValue];
     }
     
 }
@@ -131,16 +148,16 @@
     id view = nil;
     Ivar viewIvar = class_getInstanceVariable([cell class], [@"_tracklistItemView" UTF8String]);
     
-    if (viewIvar != nil){
+    if (viewIvar != nil) {
         view = object_getIvar(cell, viewIvar);
     } else {
         viewIvar = class_getInstanceVariable([cell class], [@"_lockupView" UTF8String]);
-        if (viewIvar != nil){
+        if (viewIvar != nil) {
             view = object_getIvar(cell, viewIvar);
         }
     }
     
-    if (view && [view respondsToSelector:@selector(iSeeStars_addRatingView)]){
+    if (view && [view respondsToSelector:@selector(iSeeStars_addRatingView)]) {
         [view performSelectorOnMainThread:@selector(iSeeStars_addRatingView) withObject:nil waitUntilDone:NO];
     }
 }

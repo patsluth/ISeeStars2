@@ -8,8 +8,6 @@
 
 /* Begin PBXFileReference section */
 		2EA989251BE937A300A79AC9 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		2EA989271BE937A300A79AC9 /* ISeeStarsPrefs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ISeeStarsPrefs; sourceTree = "<group>"; };
-		2EA989281BE937A300A79AC9 /* ISeeStarsTest */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ISeeStarsTest; sourceTree = "<group>"; };
 		2EA989291BE937A300A79AC9 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
 		2EA9892A1BE937A300A79AC9 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		2EA9892B1BE937A300A79AC9 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
@@ -24,15 +22,13 @@
 			isa = PBXGroup;
 			children = (
 				2EA989251BE937A300A79AC9 /* Assets */,
-				2EA989271BE937A300A79AC9 /* ISeeStarsPrefs */,
-				2EA989281BE937A300A79AC9 /* ISeeStarsTest */,
+				2EA9892F1BE937A300A79AC9 /* ISeeStars2.plist */,
 				2EA989291BE937A300A79AC9 /* layout */,
 				2EA989311BE937A300A79AC9 /* Makefile */,
 				2EA9892A1BE937A300A79AC9 /* public */,
 				2EA9892B1BE937A300A79AC9 /* Resources */,
-				2EA989301BE937A300A79AC9 /* SWISeeStarsRatingView.m */,
-				2EA9892F1BE937A300A79AC9 /* ISeeStars2.plist */,
 				2EA989321BE937A300A79AC9 /* SWISeeStars.xm */,
+				2EA989301BE937A300A79AC9 /* SWISeeStarsRatingView.m */,
 			);
 			sourceTree = "<group>";
 		};
