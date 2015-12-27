@@ -8,10 +8,7 @@
 
 #import "SWISeeStarsPSListController.h"
 
-#import <Preferences/Preferences.h>
-
 #import "libsw/libSluthware/libSluthware.h"
-#import "libsw/SWPSTwitterCell.h"
 
 
 
@@ -28,13 +25,6 @@
 
 
 @implementation SWISeeStarsPSListController
-
-#pragma mark Twitter
-
-- (void)viewTwitterProfile:(PSSpecifier *)specifier
-{
-    [SWPSTwitterCell performActionWithSpecifier:specifier];
-}
 
 @end
 
