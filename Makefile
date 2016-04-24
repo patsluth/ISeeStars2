@@ -5,7 +5,7 @@
 
 FINALPACKAGE = 1
 DEBUG = 0
-PACKAGE_VERSION = 1.0-6
+PACKAGE_VERSION = 1.0-7
 
 
 
@@ -24,7 +24,7 @@ TARGET = iphone:clang:latest:7.0
 
 TWEAK_NAME = ISeeStars2
 ISeeStars2_CFLAGS += -fobjc-arc
-ISeeStars2_FILES = SWISeeStars.xm SWISeeStarsRatingView.m
+ISeeStars2_FILES = SWISeeStars.xm SWISeeStarsView.m
 ISeeStars2_FRAMEWORKS = Foundation UIKit CoreGraphics
 ISeeStars2_LIBRARIES = sw packageinfo
 
