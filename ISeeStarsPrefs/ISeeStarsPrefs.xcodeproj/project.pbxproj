@@ -19,7 +19,7 @@
 		2EA9891F1BE9376600A79AC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 2EA989221BE9376600A79AC9 /* Build configuration list for PBXProject "ISeeStarsPrefs" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -40,6 +40,8 @@
 		2EA989231BE9376600A79AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};

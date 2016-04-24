@@ -28,6 +28,10 @@
 {
 	[super awakeFromNib];
 	
+	for (UIImageView *imageView in self.imageViewCollection) {
+		[imageView.layer setMinificationFilter:kCAFilterTrilinear];
+	}
+	
 	self.tag = 696969;
 	self.translatesAutoresizingMaskIntoConstraints = NO;
 	
