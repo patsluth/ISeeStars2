@@ -98,6 +98,13 @@
 														multiplier:1.0
 														  constant:0.0]];
 		[self addConstraint:[NSLayoutConstraint constraintWithItem:ratingView
+														 attribute:NSLayoutAttributeTop
+														 relatedBy:NSLayoutRelationEqual
+															toItem:self
+														 attribute:NSLayoutAttributeTop
+														multiplier:1.0
+														  constant:0.0]]; // 1.0 pixel padding on top
+		[self addConstraint:[NSLayoutConstraint constraintWithItem:ratingView
 														 attribute:NSLayoutAttributeWidth
 														 relatedBy:NSLayoutRelationEqual
 															toItem:nil
@@ -105,22 +112,15 @@
 														multiplier:1.0
 														  constant:16]]; //artwork origin (taken from flex)
 		[self addConstraint:[NSLayoutConstraint constraintWithItem:ratingView
-														 attribute:NSLayoutAttributeTop
+														 attribute:NSLayoutAttributeHeight
 														 relatedBy:NSLayoutRelationEqual
-															toItem:self
-														 attribute:NSLayoutAttributeTop
+															toItem:nil
+														 attribute:NSLayoutAttributeNotAnAttribute
 														multiplier:1.0
-														  constant:2.0]]; // 2 pixel padding
-		[self addConstraint:[NSLayoutConstraint constraintWithItem:ratingView
-														 attribute:NSLayoutAttributeBottom
-														 relatedBy:NSLayoutRelationEqual
-															toItem:self
-														 attribute:NSLayoutAttributeBottom
-														multiplier:1.0
-														  constant:-2.0]]; // 2 pixel padding
+														  constant:(NSInteger)CGRectGetHeight(self.bounds) - 2]]; // 2 pixel padding
 		
-		[self setNeedsDisplay];
-		[ratingView setNeedsDisplay];
+		[self setNeedsLayout];
+		[ratingView setNeedsLayout];
 		
 	}
 	

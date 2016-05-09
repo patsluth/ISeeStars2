@@ -17,7 +17,7 @@
 {
 }
 
-@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageViewCollection;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray<UIImageView *> *imageViewCollection;
 
 @property (nonatomic) NSInteger rating;
 @property (nonatomic) NSInteger likedStatus;

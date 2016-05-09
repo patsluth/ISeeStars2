@@ -8,6 +8,8 @@
 
 #import "SWISeeStarsView.h"
 
+#import "UIImage+SW.h"
+
 
 
 
@@ -24,13 +26,11 @@
 
 @implementation SWISeeStarsView
 
+#pragma mark - Init
+
 - (void)awakeFromNib
 {
 	[super awakeFromNib];
-	
-	for (UIImageView *imageView in self.imageViewCollection) {
-		[imageView.layer setMinificationFilter:kCAFilterTrilinear];
-	}
 	
 	self.tag = 696969;
 	self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -38,6 +38,8 @@
 	self.rating = 0;
 	self.likedStatus = 0;
 }
+
+#pragma mark - SWISeeStarsView
 
 - (void)setRating:(NSInteger)rating
 {
@@ -78,6 +80,25 @@
 	
 	self.rating = self.rating; // Update views
 	
+}
+
+- (void)layoutSubviews
+{
+	[super layoutSubviews];
+	
+	
+	CGSize desiredImageSize = self.imageViewCollection.firstObject.bounds.size;
+	desiredImageSize.height = MAX(desiredImageSize.width, desiredImageSize.height); // square
+	
+	if (!CGSizeEqualToSize(desiredImageSize, self.dotImage.size)) { // Only resize if we need to
+		
+		self.dotImage = [[self.dotImage resizeImage:desiredImageSize] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+		self.starImage = [[self.starImage resizeImage:desiredImageSize] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+		self.heartImage = [[self.heartImage resizeImage:desiredImageSize] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+		
+		self.likedStatus = self.likedStatus;
+		
+	}
 }
 
 @end

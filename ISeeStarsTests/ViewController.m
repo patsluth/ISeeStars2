@@ -41,10 +41,26 @@
 	[v setNeedsDisplay];
 	[self.view setNeedsDisplay];
 	
+	
+	
+	NSArray *test = @[@(0), @(1), @(2), @(3), @(4), @(5)];
+	[self enumerateArray:[test mutableCopy]];
+	
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)enumerateArray:(NSMutableArray *)a
+{
+	if (a.count > 0) {
+		NSLog(@"%@", [a firstObject]);
+		[a removeObject:[a firstObject]];
+		[self performSelector:@selector(enumerateArray:) withObject:a afterDelay:1];
+	}
+	
+}
+
+- (void)didReceiveMemoryWarning
+{
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
 }

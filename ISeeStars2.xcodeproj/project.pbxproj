@@ -16,6 +16,8 @@
 		2E56A2301CCC0E0200FCC269 /* SWISeeStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E56A22E1CCC0E0200FCC269 /* SWISeeStarsView.m */; };
 		2E56A2311CCC0E0200FCC269 /* SWISeeStarsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E56A22F1CCC0E0200FCC269 /* SWISeeStarsView.xib */; };
 		2E6A6E2A1CCC75E40037CAD3 /* SWISeeStarsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E6A6E291CCC75E40037CAD3 /* SWISeeStarsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E748D3C1CE02B240032B2D8 /* UIImage+SW.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E748D3A1CE02B240032B2D8 /* UIImage+SW.h */; };
+		2E748D3D1CE02B240032B2D8 /* UIImage+SW.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E748D3B1CE02B240032B2D8 /* UIImage+SW.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2E56A22E1CCC0E0200FCC269 /* SWISeeStarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWISeeStarsView.m; sourceTree = SOURCE_ROOT; };
 		2E56A22F1CCC0E0200FCC269 /* SWISeeStarsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWISeeStarsView.xib; sourceTree = SOURCE_ROOT; };
 		2E6A6E291CCC75E40037CAD3 /* SWISeeStarsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWISeeStarsView.h; path = public/SWISeeStarsView.h; sourceTree = "<group>"; };
+		2E748D3A1CE02B240032B2D8 /* UIImage+SW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SW.h"; sourceTree = "<group>"; };
+		2E748D3B1CE02B240032B2D8 /* UIImage+SW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SW.m"; sourceTree = "<group>"; };
 		2EA989291BE937A300A79AC9 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
 		2EA9892A1BE937A300A79AC9 /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		2EA989311BE937A300A79AC9 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				2EA989291BE937A300A79AC9 /* layout */,
 				2EA9892A1BE937A300A79AC9 /* public */,
 				2EA989311BE937A300A79AC9 /* Makefile */,
+				2E748D3A1CE02B240032B2D8 /* UIImage+SW.h */,
+				2E748D3B1CE02B240032B2D8 /* UIImage+SW.m */,
 				2EA989321BE937A300A79AC9 /* SWISeeStars.xm */,
 				2E6A6E291CCC75E40037CAD3 /* SWISeeStarsView.h */,
 				2E56A22E1CCC0E0200FCC269 /* SWISeeStarsView.m */,
@@ -103,6 +109,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E748D3C1CE02B240032B2D8 /* UIImage+SW.h in Headers */,
 				2E6A6E2A1CCC75E40037CAD3 /* SWISeeStarsView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E748D3D1CE02B240032B2D8 /* UIImage+SW.m in Sources */,
 				2E56A2301CCC0E0200FCC269 /* SWISeeStarsView.m in Sources */,
 				2E56A21A1CCC05D800FCC269 /* ViewController.m in Sources */,
 				2E56A2171CCC05D800FCC269 /* AppDelegate.m in Sources */,
